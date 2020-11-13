@@ -20,7 +20,7 @@
             <div class="flex flex-col justify-around h-full">
                 <div class="text-center text-gray-800">
                     <h1 class="font-semibold tracking-wider text-6xl">
-                        <img src="/logos.svg" alt="Rapidez" class="w-96 mx-auto">
+                        <img src="https://raw.githubusercontent.com/rapidez/art/master/logo.svg" alt="Rapidez" class="w-96 mx-auto">
                     </h1>
                     <h2 class="text-3xl font-semibold mb-2">Headless Magento</h2>
                     <p class="text-lg mb-8">With Laravel, Vue and Reactive Search</p>
