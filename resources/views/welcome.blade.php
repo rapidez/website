@@ -19,9 +19,8 @@
         <div class="min-h-screen flex items-center justify-center">
             <div class="flex flex-col justify-around h-full">
                 <div class="text-center text-gray-800">
-                    <div class="text-6xl">🚀</div>
                     <h1 class="font-semibold tracking-wider text-6xl">
-                        Rapidez
+                        <img src="/logos.svg" alt="Rapidez" class="w-96 mx-auto">
                     </h1>
                     <h2 class="text-3xl font-semibold mb-2">Headless Magento</h2>
                     <p class="text-lg mb-8">With Laravel, Vue and Reactive Search</p>
@@ -30,7 +29,7 @@
                         <p class="text-green-400 font-semibold">Thank you!</p>
                     @else
                         <p>Subscribe for updates!</p>
-                        <form class="mt-2 relative" method="POST" action="https://mailcoach.rapidez.io/subscribe/78170cf4-6969-4226-b1ab-0f79eec57542">
+                        <form class="m-2 relative" method="POST" action="https://mailcoach.rapidez.io/subscribe/78170cf4-6969-4226-b1ab-0f79eec57542">
                             <input type="email" name="email" placeholder="Your email" class="bg-gray-100 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 pr-10 text-gray-700 leading-tight focus:outline-none focus:bg-white border-green-400">
                             <button type="submit" class="absolute right-0 top-0 bottom-0 bg-green-400 rounded-r p-2 hover:bg-green-300 text-white">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
