@@ -22,7 +22,7 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="bg-gray-100 h-screen antialiased font-sans">
+<body class="bg-gray-200 h-screen antialiased font-sans">
     <div class="flex flex-col">
         <div class="min-h-screen flex items-center justify-center">
             <div class="flex flex-col justify-around h-full">
