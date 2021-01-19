@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Validator;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +17,24 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('slack', function () {
+    return view('slack');
+});
+
+Route::post('slack', function (Request $request) {
+    Validator::make($request->all(), [
+        'email' => 'required|email',
+    ])->validate();
+
+    $response = Http::withHeaders([
+        'Content-type' => 'application/json; charset=utf-8'
+    ])
+    ->withToken(config('services.slack.token'))
+    ->get('https://slack.com/api/users.admin.invite', [
+        'email' => 'roy2@justbetter.nl',
+    ]);
+
+    return redirect('/slack')->with('response', $response->json());
 });
