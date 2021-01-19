@@ -33,7 +33,7 @@ Route::post('slack', function (Request $request) {
     ])
     ->withToken(config('services.slack.token'))
     ->get('https://slack.com/api/users.admin.invite', [
-        'email' => 'roy2@justbetter.nl',
+        'email' => $request->email,
     ]);
 
     return redirect('/slack')->with('response', $response->json());
