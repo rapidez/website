@@ -76,8 +76,8 @@ return [
     */
 
     'cache'       => [
-        'enabled' => false,
-        'period'  => 5
+        'enabled' => env('APP_ENV', 'production') == 'production',
+        'period'  => 30
     ],
 
     /*
@@ -125,8 +125,8 @@ return [
         'fa_v4_shims'    => true, // Add FontAwesome v4 shims prevent BC break
         'show_side_bar'  => true,
         'colors'         => [
-            'primary'    => '#787AF6',
-            'secondary'  => '#2b9cf2'
+            'primary'    => '#27AE60',
+            'secondary'  => '#34CDB1'
         ],
 
         'theme_order'    => null // ['LaRecipeDarkTheme', 'customTheme']
