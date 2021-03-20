@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0aca6935227405f3f77d6f89330664d0",
+    "content-hash": "e0711c9e65ac97383e2d6d878df120d9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2516,6 +2516,42 @@
                 }
             ],
             "time": "2020-08-18T17:17:46+00:00"
+        },
+        {
+            "name": "rapidez/larecipe-rapidez-theme",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./larecipe-components/RapidezTheme",
+                "reference": "bb93cc877d9f6b05bffcdbd234c00cd25bbd35d2"
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Rapidez\\Rapidez\\ThemeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Rapidez\\Rapidez\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A LaRecipe theme.",
+            "keywords": [
+                "laravel",
+                "larecipe"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "swiftmailer/swiftmailer",

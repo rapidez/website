@@ -1,0 +1,38 @@
+.sidebar {
+  border: none;
+  background: #205060;
+}
+
+.sidebar ul li h2 {
+  color: var(--primary);
+}
+
+.sidebar ul li ul li a {
+  color: #DAE1E7;
+}
+
+.documentation a {
+    color: var(--primary);
+}
+
+.alert, table {
+    box-shadow: none;
+}
+
+.alert:hover, table:hover {
+    box-shadow: none;
+}
+
+table td {
+    padding: 0.5rem 1rem;
+}
+
+.alert.is-info a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.alert.is-info a:hover {
+    text-decoration: none;
+}
