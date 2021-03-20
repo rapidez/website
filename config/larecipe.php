@@ -16,7 +16,7 @@ return [
     'docs'        => [
         'route'   => '/docs',
         'path'    => '/resources/docs',
-        'landing' => 'overview',
+        'landing' => 'intro',
         'middleware' => ['web'],
     ],
 
@@ -94,11 +94,11 @@ return [
     */
 
     'search'            => [
-        'enabled'       => false,
-        'default'       => 'algolia',
+        'enabled'       => true,
+        'default'       => 'internal',
         'engines'       => [
             'internal'  => [
-                'index' => ['h2', 'h3']
+                'index' => ['h2']
             ],
             'algolia'   => [
                 'key'   => '',
