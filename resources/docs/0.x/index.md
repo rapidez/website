@@ -1,2 +1,12 @@
-- ## Get Started
-    - [Overview](/{{route}}/{{version}}/overview)
+- ## Getting Started
+    - [Intro](/{{route}}/{{version}}/intro)
+    - [Installation](/{{route}}/{{version}}/installation)
+    - [Deployment](/{{route}}/{{version}}/deployment)
+    - [FAQ](/{{route}}/{{version}}/faq)
+    - [Troubleshooting](/{{route}}/{{version}}/troubleshooting)
+- ## Development
+    - [Theming](/{{route}}/{{version}}/theming)
+    - [Packages](/{{route}}/{{version}}/packages)
+- ## Components
+    - [Indexer](/{{route}}/{{version}}/indexer)
+    - [Caching](/{{route}}/{{version}}/caching)
