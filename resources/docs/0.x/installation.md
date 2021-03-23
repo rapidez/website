@@ -38,7 +38,7 @@ php artisan rapidez:index
 ```
 Use your favorite webserver (we like [Valet+](https://github.com/weprovide/valet-plus) on macOS) or use PHP's built-in development server:
 ```bash
-php artisan server
+php artisan serve
 ```
 See it in the browser! 🚀
 

@@ -13,7 +13,7 @@
 <a name="speed"></a>
 ## [Why is it so fast?](#speed)
 
-> {primary.fa-rocket} Because we do not use the whole frontend stack from Magento. Just Laravel which queries the Magento database directly and the Magento REST API / GraphQL for other parts like the cart and checkout. Category filters are so fast because of Reactive Search which uses Elasticsearch as database. For the smooth page transitions we use Turbolinks.
+> {primary.fa-rocket} Because we do not use the Magento frontend stack. Just Laravel which queries the Magento database directly and the Magento REST API / GraphQL for other parts like the cart and checkout. Category filters are so fast because of Reactive Search which uses Elasticsearch as database. For the smooth page transitions we use Turbolinks.
 
 <a name="compare"></a>
 ## [How is this different from Vue Storefront?](#compare)
