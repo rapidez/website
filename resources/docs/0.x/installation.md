@@ -5,6 +5,7 @@
 - [Requirements](#requirements)
 - [Create your first project](#create-project)
 - [CORS](#cors)
+- [Flat tables](#flat-tables)
 - [Multistore](#multistore)
 - [Demo Magento 2 webshop](#magento-demo-shop)
 
@@ -15,7 +16,7 @@
 - PHP >= 7.4
 - MySQL >= 5.7.13
 - Elasticsearch >= 7.6
-- Magento >= 2.4.1 installation ([or use a demo shop](#magento-demo-shop)) with flat tables enabled
+- Magento >= 2.4.1 installation with [flat tables enabled](#flat-tables) ([or use a demo shop](#magento-demo-shop))
 
 <a name="create-project"></a>
 ## [Create your first project](#create-project)
@@ -35,7 +36,7 @@ php artisan storage:link
 php artisan rapidez:validate
 php artisan rapidez:index
 ```
-Use your favorite webserver (we like [Valet+](https://github.com/weprovide/valet-plus) os macOS) or use PHP's built-in development server:
+Use your favorite webserver (we like [Valet+](https://github.com/weprovide/valet-plus) on macOS) or use PHP's built-in development server:
 ```bash
 php artisan server
 ```
@@ -51,6 +52,17 @@ Because we're making Ajax request to the Magento API; CORS need to be opened. If
 ### Elasticsearch
 
 If you're using your own Elasticsearch installation you've to open CORS in `elasticsearch.yml` and restart Elasticsearch. An example can be found in the root of this project. That configuration is used when you're using Elasticsearch from our Docker Compose config.
+
+<a name="flat-tables"></a>
+## [Flat tables](#flat-tables)
+
+The flat tables need to be enabled in Magento because Rapidez needs them to easily query for products and categories. You can follow [this guide](https://docs.magento.com/user-guide/catalog/catalog-flat.html#step-1-enable-the-flat-catalog) to enable it. After that you need to make sure the [Storefront Properties](https://docs.magento.com/user-guide/stores/attributes-product.html#storefront-properties) are configured correctly for all your attributes, you can validate the settings with `php artisan rapidez:validate`. If the result is that some attributes are not in the flat table you can enable "Used in Product Listing" on them and validate again.
+
+> {warning} All attributes with "Used in Product Listing" enabled will be indexed into Elasticsearch. As this index is publicly available you should be careful with attributes which contain "sensitive" data like for example sale counts.
+
+Finally when everything is good you should [run the Magento indexes](https://devdocs.magento.com/guides/v2.4/config-guide/cli/config-cli-subcommands-index.html#config-cli-subcommands-index-reindex). For example with `bin/magento indexer:reindex` from your Magento installation.
+
+> {info} If you run into "Row size too large" MySQL errors when indexing in Magento then you disable "Used in Product Listing" for the attributes which contains the most data like descriptions until the indexes run fine.
 
 <a name="multistore"></a>
 ## [Multistore](#multistore)
