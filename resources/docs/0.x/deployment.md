@@ -5,7 +5,7 @@
 - [Secure Elasticsearch](#secure-elasticsearch)
 - [Magento 2 Docker](#magento2-docker)
 
-Have a look at the [Laravel deployment docs](https://laravel.com/docs/master/deployment)
+Have a look at the [Laravel deployment docs](https://laravel.com/docs/master/deployment) and make sure [CORS is opened up](/{{route}}/{{version}}/installation#cors).
 
 <a name="secure-elasticsearch"></a>
 ## [Secure Elasticsearch](#secure-elasticsearch)

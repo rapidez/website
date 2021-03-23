@@ -36,7 +36,7 @@ php artisan storage:link
 php artisan rapidez:validate
 php artisan rapidez:index
 ```
-Use your favorite webserver (we like [Valet+](https://github.com/weprovide/valet-plus) on macOS) or use PHP's built-in development server:
+Use your favorite webserver (we like [Valet+](https://github.com/weprovide/valet-plus) on macOS) or use Laravel's built-in development server:
 ```bash
 php artisan serve
 ```
@@ -47,7 +47,7 @@ See it in the browser! 🚀
 
 ### Magento
 
-Because we're making Ajax request to the Magento API; CORS need to be opened. If you're using Valet Plus this can easily done, [see here](https://github.com/weprovide/valet-plus/issues/493). With the Docker Magento installation it's already opened [with a patch](https://github.com/michielgerritsen/magento2-extension-integration-test/blob/master/magento/patches/cors.patch). For production you've to restrict this to your domain.
+Because we're making Ajax request to the Magento API; CORS need to be opened. If you're using Valet+ this can easily done, [see here](https://github.com/weprovide/valet-plus/issues/493). With the Docker Magento installation it's already opened [with a patch](https://github.com/michielgerritsen/magento2-extension-integration-test/blob/master/magento/patches/cors.patch). For production you've to restrict this to your domain within your webserver configuration or for example with this [Magento 2 CORS module](https://github.com/graycoreio/magento2-cors).
 
 ### Elasticsearch
 
