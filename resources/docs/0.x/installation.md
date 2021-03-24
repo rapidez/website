@@ -47,7 +47,10 @@ See it in the browser! 🚀
 
 ### Magento
 
-Because we're making Ajax request to the Magento API; CORS need to be opened. If you're using Valet+ this can easily done, [see here](https://github.com/weprovide/valet-plus/issues/493). With the Docker Magento installation it's already opened [with a patch](https://github.com/michielgerritsen/magento2-extension-integration-test/blob/master/magento/patches/cors.patch). For production you've to restrict this to your domain within your webserver configuration or for example with this [Magento 2 CORS module](https://github.com/graycoreio/magento2-cors).
+Rapidez is making AJAX requests to the Magento API which requires CORS to be opened.
+- If you're using Valet+ this can be easily done, [see here](https://github.com/weprovide/valet-plus/issues/493).
+- With the Docker Magento installation it's already opened [with a patch](https://github.com/michielgerritsen/magento2-extension-integration-test/blob/master/magento/patches/cors.patch). 
+- For production you've to restrict this to your domain within your webserver configuration or with for example this [Magento 2 CORS module](https://github.com/graycoreio/magento2-cors).
 
 ### Elasticsearch
 

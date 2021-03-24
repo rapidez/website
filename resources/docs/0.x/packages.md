@@ -25,11 +25,11 @@ Filter | Explanation
 <a name="vue-events"></a>
 ## [Vue Events](#vue-events)
 
-Rapidez emits some custom Vue events you can use to hook into with [`vm.$on`](https://vuejs.org/v2/api/#vm-on). We're using them for example within the [Rapidez Mollie](https://github.com/rapidez/mollie) package, have a look at the [`mollie.js`](https://github.com/rapidez/mollie/blob/master/resources/js/mollie.js) file.
+Rapidez emits some custom Vue events you can use to hook into with [`vm.$on`](https://vuejs.org/v2/api/#vm-on). This is used for example within the [Rapidez Mollie](https://github.com/rapidez/mollie) package, have a look at the [`mollie.js`](https://github.com/rapidez/mollie/blob/master/resources/js/mollie.js) file.
 
 Event | Explanation
 --- | ---
 `CheckoutCredentialsSaved` | Triggered after the checkout credentials are saved
 `CheckoutPaymentSaved` | Triggered after the payment method is saved
 
-There is also a `doNotGoToTheNextStep` variable on the root Vue instance which can be used to prevent the checkout from going to the next step. That's also used within the [Rapidez Mollie](https://github.com/rapidez/mollie) package to prevent the checkout from going to the success page because you've to pay first and we'd like to redirect the user to the payment page.
+There is also a `doNotGoToTheNextStep` variable on the root Vue instance which can be used to prevent the checkout from going to the next step. That's also used within the [Rapidez Mollie](https://github.com/rapidez/mollie){target="_blank"} package to prevent the checkout from going to the success page because you've to pay first and we'd like to redirect the user to the payment page.

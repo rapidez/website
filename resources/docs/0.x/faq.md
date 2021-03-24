@@ -33,7 +33,7 @@
 <a name="query"></a>
 ## [Why query the Magento database instead of using GraphQL?](#query)
 
-> {primary.fa-database} Speed; and not all data is available through GraphQL. The Magento database stucture isn't changed much over the years and we're just using it to get data. For inserting and updating we use the REST API or GraphQL.
+> {primary.fa-database} Speed; and not all data is available through GraphQL. The Magento database stucture isn't changed much over the years and Rapidez is just using it to get data. For inserting and updating we use the REST API or GraphQL.
 
 <a name="tailwindcss"></a>
 ## [TailwindCSS is used, do I need to use it?](#tailwindcss)
