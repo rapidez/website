@@ -18,7 +18,7 @@
                 Will be fully open source soon! Join our newsletter so we can keep you posted!
             </x-feature>
             <x-feature title="Browser tests" icon="desktop-computer">
-                The Rapidez Core is tested in the browser like in the real world with Laravel Dusk tests.
+                The Rapidez Core is tested in the browser with Laravel Dusk tests.
             </x-feature>
             <x-feature title="Magento focused" icon="academic-cap">
                 Full focus on the Magento platform so less abstraction and faster development.
