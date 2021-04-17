@@ -15,7 +15,7 @@
                 The latest techniques and features are used like Laravel Blade Components, TailwindCSS JIT mode and GraphQL.
             </x-feature>
             <x-feature title="Open source" icon="lock-open">
-                Will be fully open source soon! Join our newsletter so we can keep you posted!
+                Will be fully open source soon under the GNU GPLv3 license! Join our newsletter so we can keep you posted!
             </x-feature>
             <x-feature title="Browser tests" icon="desktop-computer">
                 The Rapidez Core is tested in the browser with Laravel Dusk tests.
