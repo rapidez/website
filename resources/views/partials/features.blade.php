@@ -6,7 +6,7 @@
         </h2>
         <div class="flex flex-wrap sm:-mx-6 mt-10 lg:mt-24">
             <x-feature title="Easy development" icon="code">
-                Just Laravel and it's templating engine Blade, no more XML files and phtml templates.
+                Just Laravel and its templating engine Blade, no more XML files and phtml templates.
             </x-feature>
             <x-feature title="Lightning fast" icon="fast-forward">
                 Fully decoupled frontend with catalog data taken directly from the database and Turbolinks for smooth page transitions.
