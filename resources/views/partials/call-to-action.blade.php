@@ -9,12 +9,12 @@
         </h2>
         <div class="mt-8 flex justify-center items-center sm:flex-wrap sm:flex-row flex-col">
             <div class="inline-flex rounded-full">
-                <a href="https://demo.rapidez.io" target="_blank" class="bg-gradient-to-b from-primary-100 to-primary-200 block w-full py-3 px-6 rounded-full text-white font-medium border border-transparent opacity-100 hover:opacity-70 transition duration-150 ease-in-out">
+                <a href="https://demo.rapidez.io" target="_blank" class="bg-gradient-to-b from-primary-100 to-primary-200 block w-full py-3 px-6 rounded-full text-white font-bold border border-transparent opacity-100 hover:opacity-70 transition duration-150 ease-in-out">
                     Explore the Rapidez demo
                 </a>
             </div>
             <div class="sm:mt-0 mt-4 sm:ml-4 inline-flex">
-                <a href="https://docs.rapidez.io/0.x/installation.html" target="_blank" class="whitespace-nowrap inline-flex items-center justify-center border border-transparent px-6 py-3 rounded-full text-base text-white bg-secondary-100 opacity-100 hover:opacity-80 transition duration-150 ease-in-out">
+                <a href="https://docs.rapidez.io/0.x/installation.html" target="_blank" class="whitespace-nowrap inline-flex items-center justify-center border border-transparent px-6 py-3 rounded-full text-base font-bold text-white bg-secondary-100 opacity-100 hover:opacity-80 transition duration-150 ease-in-out">
                     Install Rapidez now
                 </a>
             </div>

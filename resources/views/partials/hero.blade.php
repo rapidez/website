@@ -27,8 +27,10 @@
             </div>
         </div>
     </div>
-    <div class="absolute inset-0 top-[-17rem] xl:top-[-21rem] 2xl:top-[-26rem] -mr-8 pointer-events-none flex sm:flex-col flex-row-reverse">
-        <x-icon-r class="min-w-[900px] sm:min-w-12 max-w-[115rem] 2xl:max-w-[110rem] flex -mt-3 sm:-mt-32 sm:-mr-32 -mr-20 w-full ml-auto opacity-[.04]"/>
+    <div class="absolute inset-0 top-[-17rem] xl:top-[-21rem] 2xl:top-[-23rem] -mr-8 pointer-events-none flex sm:flex-col flex-row-reverse -mb-32">
+        <x-icon-r class="min-w-[900px] sm:min-w-12 max-w-[115rem] 2xl:max-w-[115rem] flex -mt-3 sm:-mt-32 sm:-mr-32 -mr-20 w-full ml-auto opacity-[.04]"/>
     </div>
-    <x-icon-smoke class="absolute inset-x-0 w-full bottom-0 block -mb-px"/>
+    <div class="absolute inset-x-0 w-full bottom-0 block -mb-px">
+        <x-icon-smoke class="w-full h-auto"/>
+    </div>
 </div>
