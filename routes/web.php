@@ -15,13 +15,8 @@ use Illuminate\Support\Facades\Validator;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('slack', function () {
-    return view('slack');
-});
+Route::view('/', 'home');
+Route::view('slack', 'slack');
 
 Route::post('slack', function (Request $request) {
     Validator::make($request->all(), [
