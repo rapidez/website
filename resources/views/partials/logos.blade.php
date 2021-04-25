@@ -12,12 +12,12 @@
             </div>
             <div class="flex p-1 sm:p-6 w-full sm:w-1/3">
                 <div class="bg-gray-100 flex flex-1 p-3 sm:p-6 items-center justify-center rounded-full">
-                    <img src="/img/vue-js-logo-gray.svg" alt="Vue" loading="lazy" class="h-10 sm:h-10 mr-3">
+                    <img src="/img/vue.svg" alt="Vue" loading="lazy" class="h-10 sm:h-10 mr-3">
                 </div>
             </div>
             <div class="flex p-1 sm:p-6 w-full sm:w-1/3">
                 <div class="bg-gray-100 flex flex-1 p-3 sm:p-6 items-center justify-center rounded-full">
-                    <img src="/img/reactive-search-logo-gray.svg" alt="Reactive Search" loading="lazy" class="h-10 sm:h-10 mr-3">
+                    <img src="/img/reactive-search.svg" alt="Reactive Search" loading="lazy" class="h-10 sm:h-10 mr-3">
                 </div>
             </div>
         </div>
