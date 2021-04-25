@@ -27,14 +27,16 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 <body x-data="{solutions_menu:false, mobile_menu:false}" class="min-h-screen flex flex-col flex-1 font-body overflow-x-hidden antialiased">
-    @include('partials.nav')
-    @include('partials.hero')
-    @include('partials.logos')
-    @include('partials.features')
-    @include('partials.seperator-logo')
-    @include('partials.faq')
-    @include('partials.seperator-clouds')
-    @include('partials.call-to-action')
-    @include('partials.footer')
+    <div class="overflow-x-hidden">
+        @include('partials.nav')
+        @include('partials.hero')
+        @include('partials.logos')
+        @include('partials.features')
+        @include('partials.seperator-logo')
+        @include('partials.faq')
+        @include('partials.seperator-clouds')
+        @include('partials.call-to-action')
+        @include('partials.footer')
+    </div>
 </body>
 </html>

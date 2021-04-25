@@ -19,7 +19,7 @@
                 </a>
             </nav>
             <div class="ml-auto">
-                <a href="https://demo.rapidez.io" target="_blank" class="hidden whitespace-nowrap sm:inline-flex items-center justify-center border border-transparent px-6 py-3 rounded-full text-base text-white bg-gradient-to-b from-primary-100 to-primary-200 opacity-100 hover:opacity-70 transition duration-150 ease-in-out">
+                <a href="https://demo.rapidez.io" target="_blank" class="hidden whitespace-nowrap sm:inline-flex items-center justify-center border border-transparent px-6 py-3 rounded-full text-base text-white bg-gradient-to-b from-primary-100 to-primary-200 opacity-100 hover:opacity-70 transition duration-150 ease-in-out font-bold">
                     Demo
                 </a>
             </div>
@@ -34,10 +34,10 @@
 
     <div x-show="mobile_menu" class="z-10">
         <div class="absolute w-screen h-screen bg-black bg-opacity-30 z-30 inset-0 md:hidden"></div>
-        <div class="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+        <div class="absolute z-30 top-0 inset-x-0 p-2 sm:pt-5 transition transform origin-top-right md:hidden">
             <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
                 <div class="pt-4 pb-6 px-4">
-                    <div class="flex items-center justify-between">
+                    <div class="flex items-center justify-between -mt-px sm:mt-px">
                         <div>
                             <img src="https://raw.githubusercontent.com/rapidez/art/master/logo.svg" alt="Rapidez" class="h-12 mx-auto">
                         </div>
@@ -70,7 +70,7 @@
                             </a>
                         </nav>
                         <div class="mt-8 flex justify-center">
-                            <a href="https://demo.rapidez.io" target="_blank" class="whitespace-nowrap inline-flex items-center justify-center border border-transparent px-6 py-3 rounded-md text-base text-white bg-gradient-to-b from-primary-100 to-primary-200">
+                            <a href="https://demo.rapidez.io" target="_blank" class="inline-flex whitespace-nowrap items-center justify-center border border-transparent px-6 py-3 rounded-full text-base text-white bg-gradient-to-b from-primary-100 to-primary-200 opacity-100 hover:opacity-70 transition duration-150 ease-in-out font-bold">
                                 Demo
                             </a>
                         </div>
