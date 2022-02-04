@@ -25,8 +25,11 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+
+    @include('googletagmanager::head')
 </head>
 <body x-data="{solutions_menu:false, mobile_menu:false}" class="min-h-screen flex flex-col flex-1 font-body overflow-x-hidden antialiased">
+    @include('googletagmanager::body')
     <div class="overflow-x-hidden">
         @include('partials.nav')
         @include('partials.hero')
