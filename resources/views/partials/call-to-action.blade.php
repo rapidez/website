@@ -1,4 +1,4 @@
-<div class="mt-0 sm:-mt-32 relative z-20">
+<div class="mt-0 sm:-mt-16 relative z-20">
     <div class="max-w-7xl mx-auto py-12 px-4 mb-10 text-center">
         <div class="flex items-center justify-center mb-10">
             <img src="https://raw.githubusercontent.com/rapidez/art/master/r.svg" alt="Rapidez" class="w-16">

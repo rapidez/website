@@ -14,6 +14,9 @@
                 <a href="#faq" class="text-lg font-medium text-primary-200 text-opacity-75 hover:text-gray-900">
                     FAQ
                 </a>
+                <a href="#partners" class="text-lg font-medium text-primary-200 text-opacity-75 hover:text-gray-900">
+                    Partners
+                </a>
                 <a href="https://docs.rapidez.io" target="_blank" class="text-lg font-medium text-primary-200 text-opacity-75 hover:text-gray-900">
                     Docs
                 </a>
