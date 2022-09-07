@@ -11,7 +11,7 @@
             <div class="grid sm:grid-cols-2 gap-10 mt-20">
                 @foreach(File::files(resource_path('views/content/showcases')) as $file)
                     <div class="prose max-w-none">
-                        {!! Str::replaceLast('<a', '<a class="whitespace-nowrap inline-flex items-center content-center justify-center border border-transparent px-6 py-3 rounded-full text-base !font-bold !text-white !no-underline bg-secondary-100 opacity-100 hover:opacity-80 transition duration-150 ease-in-out"', Str::markdown(file_get_contents($file->getPathname()))) !!}
+                        {!! Str::replaceLast('<a', '<a target="_blank" class="whitespace-nowrap inline-flex items-center content-center justify-center border border-transparent px-6 py-3 rounded-full text-base !font-bold !text-white !no-underline bg-secondary-100 opacity-100 hover:opacity-80 transition duration-150 ease-in-out"', Str::markdown(file_get_contents($file->getPathname()))) !!}
                     </div>
                 @endforeach
             </div>
