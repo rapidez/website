@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Validator;
 */
 
 Route::view('/', 'home');
+Route::view('showcases', 'showcases');
 Route::view('slack', 'slack');
 
 Route::post('slack', function (Request $request) {

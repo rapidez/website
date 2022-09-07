@@ -1,3 +1,10 @@
+@php($menu = [
+    ['title' => 'Features', 'href' => '/#features', 'icon' => 'heroicon-o-check-circle'],
+    ['title' => 'FAQ', 'href' => '/#faq', 'icon' => 'heroicon-o-question-mark-circle'],
+    ['title' => 'Showcases', 'href' => '/showcases', 'icon' => 'heroicon-o-bookmark'],
+    ['title' => 'Partners', 'href' => '/#partners', 'icon' => 'heroicon-o-user-group'],
+    ['title' => 'Docs', 'href' => 'https://docs.rapidez.io', 'icon' => 'heroicon-o-document-search'],
+])
 <div class="relative bg-gray-100">
     <div class="max-w-7xl mx-auto px-6 sm:px-6">
         <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start lg:space-x-10">
@@ -8,18 +15,11 @@
                 </a>
             </div>
             <nav class="hidden lg:flex space-x-10 flex-1 justify-center">
-                <a href="#features" class="text-lg font-medium text-primary-200 text-opacity-75 hover:text-gray-900">
-                    Features
-                </a>
-                <a href="#faq" class="text-lg font-medium text-primary-200 text-opacity-75 hover:text-gray-900">
-                    FAQ
-                </a>
-                <a href="#partners" class="text-lg font-medium text-primary-200 text-opacity-75 hover:text-gray-900">
-                    Partners
-                </a>
-                <a href="https://docs.rapidez.io" target="_blank" class="text-lg font-medium text-primary-200 text-opacity-75 hover:text-gray-900">
-                    Docs
-                </a>
+                @foreach($menu as $item)
+                    <a href="{{ $item['href'] }}" class="text-lg font-medium text-primary-200 text-opacity-75 hover:text-gray-900">
+                        {{ $item['title'] }}
+                    </a>
+                @endforeach
             </nav>
             <div class="ml-auto">
                 <a href="https://demo.rapidez.io" target="_blank" class="hidden whitespace-nowrap sm:inline-flex items-center justify-center border border-transparent px-6 py-3 rounded-full text-base text-white bg-gradient-to-b from-primary-100 to-primary-200 opacity-100 hover:opacity-70 transition duration-150 ease-in-out font-bold">
@@ -53,24 +53,14 @@
                     </div>
                     <div class="mt-6">
                         <nav class="grid gap-y-2">
-                            <a href="#features" class="bg-gray-100 p-3 flex items-center rounded-md hover:bg-gray-50">
-                                <x-icon name="heroicon-o-check-circle" class="w-6 h-6 text-secondary-100"/>
-                                <span class="ml-3 text-base font-medium text-gray-900">
-                                    Features
-                                </span>
-                            </a>
-                            <a href="#faq" class="bg-gray-100 p-3 flex items-center rounded-md hover:bg-gray-50">
-                                <x-icon name="heroicon-o-question-mark-circle" class="w-6 h-6 text-secondary-100"/>
-                                <span class="ml-3 text-base font-medium text-gray-900">
-                                    FAQ
-                                </span>
-                            </a>
-                            <a href="https://docs.rapidez.io" target="_blank" class="bg-gray-100 p-3 flex items-center rounded-md hover:bg-gray-50">
-                                <x-icon name="heroicon-o-document-search" class="w-6 h-6 text-secondary-100"/>
-                                <span class="ml-3 text-base font-medium text-gray-900">
-                                    Docs
-                                </span>
-                            </a>
+                            @foreach($menu as $item)
+                                <a href="{{ $item['href'] }}" class="bg-gray-100 p-3 flex items-center rounded-md hover:bg-gray-50">
+                                    <x-icon :name="$item['icon']" class="w-6 h-6 text-secondary-100"/>
+                                    <span class="ml-3 text-base font-medium text-gray-900">
+                                        {{ $item['title'] }}
+                                    </span>
+                                </a>
+                            @endforeach
                         </nav>
                         <div class="mt-8 flex justify-center">
                             <a href="https://demo.rapidez.io" target="_blank" class="inline-flex whitespace-nowrap items-center justify-center border border-transparent px-6 py-3 rounded-full text-base text-white bg-gradient-to-b from-primary-100 to-primary-200 opacity-100 hover:opacity-70 transition duration-150 ease-in-out font-bold">

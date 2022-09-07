@@ -12,6 +12,11 @@
                 </a>
             </div>
             <div class="px-5 py-2">
+                <a href="#showcases" class="text-lg text-gray-500 hover:text-gray-900">
+                    Showcases
+                </a>
+            </div>
+            <div class="px-5 py-2">
                 <a href="#partners" class="text-lg text-gray-500 hover:text-gray-900">
                     Partners
                 </a>
