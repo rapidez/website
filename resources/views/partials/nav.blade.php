@@ -3,10 +3,11 @@
     ['title' => 'FAQ', 'href' => '/#faq', 'icon' => 'heroicon-o-question-mark-circle'],
     ['title' => 'Showcases', 'href' => '/showcases', 'icon' => 'heroicon-o-bookmark'],
     ['title' => 'Partners', 'href' => '/#partners', 'icon' => 'heroicon-o-user-group'],
+    ['title' => 'Blog', 'href' => '/blog', 'icon' => 'heroicon-o-document-text'],
     ['title' => 'Docs', 'href' => 'https://docs.rapidez.io', 'icon' => 'heroicon-o-document-search'],
 ])
 <div class="relative bg-gray-100">
-    <div class="max-w-7xl mx-auto px-6 sm:px-6">
+    <div class="max-w-7xl mx-auto px-6">
         <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start lg:space-x-10">
             <div class="flex">
                 <a href="/">

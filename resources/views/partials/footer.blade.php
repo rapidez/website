@@ -22,6 +22,11 @@
                 </a>
             </div>
             <div class="px-5 py-2">
+                <a href="/blog" class="text-lg text-gray-500 hover:text-gray-900">
+                    Blog
+                </a>
+            </div>
+            <div class="px-5 py-2">
                 <a href="http://docs.rapidez.io/" target="_blank" class="text-lg text-gray-500 hover:text-gray-900">
                     Docs
                 </a>

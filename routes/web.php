@@ -17,6 +17,14 @@ use Illuminate\Support\Facades\Validator;
 
 Route::view('/', 'home');
 Route::view('showcases', 'showcases');
+Route::get('blog/{slug}', function ($slug) {
+    $file = File::glob(resource_path('views/content/blogs/*-'.$slug.'.md'))[0] ?? false;
+    abort_unless($file, 404);
+    $content = Str::markdown(file_get_contents($file));
+    $title = Str::between($content, '<h1>', '</h1>');
+    return view('blog', compact('title', 'content'));
+});
+Route::view('blog', 'blogs');
 Route::view('slack', 'slack');
 
 Route::post('slack', function (Request $request) {
