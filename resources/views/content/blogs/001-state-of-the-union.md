@@ -4,7 +4,7 @@ Just like the president of the United States gives a speech each year about the 
 
 ## Why did we start with Rapidez?
 
-Magento is around for years, a great system but outdated in some regards; for example the frontend. With modern technologies like Laravel, Vue and TailwindCSS around we see a lot of developers wanting to switch. What if we could use those technologies with Magento? Our first approach was to keep the checkout in Magento and move the product, category and content pages to Laravel. But quickly we where getting session and routing issues so we moved on to fully headless! Manage everything from the Magento backend and have a seperated frontend.
+Magento has been around for years, a great system but outdated in some regards; for example the frontend. With modern technologies like Laravel, Vue and TailwindCSS around we see a lot of developers wanting to switch. What if we could use those technologies with Magento? Our first approach was to keep the checkout in Magento and move the product, category and content pages to Laravel. But quickly we were getting session and routing issues so we moved on to fully headless! Manage everything from the Magento backend and have a seperated frontend.
 
 We use the Eloquent ORM from Laravel to query the Magento database to get product, category and content information because it's the fastest way. We could use the REST API or GraphQL to get the same information but that would slow everything down as every requests would go through Magento. For all other interactions like adding products to the cart and the checkout we use the REST API and GraphQL from Magento.
 
@@ -34,11 +34,11 @@ Docs are very important to get started with new technologies, that's why we docu
 
 ### Projects
 
-Currently our partner [JustBetter](https://justbetter.nl) [developed 3 Rapidez webshops](https://rapidez.io/showcases) and 2 more coming soon! A lot of learnings and core contributions where made, but also multiple [new packages](https://docs.rapidez.io/0.x/packages.html) were developed! Happy developers, happy customers and happy visitors!
+Currently our partner [JustBetter](https://justbetter.nl) [developed 3 Rapidez webshops](https://rapidez.io/showcases) and 2 more coming soon! A lot of learnings and core contributions were made, but also multiple [new packages](https://docs.rapidez.io/0.x/packages.html) were developed! Happy developers, happy customers and happy visitors!
 
 ## Recap
 
-Since the start of Rapidez until this blog post we've sent 6 newsletters, did you miss one? Not subscribed? Drop your email address on the [homepage](https://rapidez.io) and stay tuned 🤘🏻
+Since the start of Rapidez up until this blog post we've sent 6 newsletters, did you miss one? Not subscribed? Drop your email address on the [homepage](https://rapidez.io) and stay tuned 🤘🏻
 
 - [2021 January](https://mailcoach.rapidez.io/webview/a7dffc6a-4791-4a3a-9b25-25761dcf18ac)
 - [2021 February](https://mailcoach.rapidez.io/webview/b371a706-c07a-4c0f-ab45-f5bf7db8c580)
