@@ -5,7 +5,7 @@
 
 @section('content')
     <div class="bg-gray-100">
-        <div class="container mx-auto pt-20 px-5">
+        <div class="container max-w-7xl mx-auto pt-20 px-6">
             <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-center text-secondary-100">Showcases</h1>
             <p class="text-center">Some awesome Rapidez projects!</p>
             <div class="grid sm:grid-cols-2 gap-10 mt-20">
