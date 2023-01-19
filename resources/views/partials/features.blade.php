@@ -9,7 +9,7 @@
                 Just Laravel and its templating engine Blade, no more XML files and phtml templates.
             </x-feature>
             <x-feature title="Lightning fast" icon="fast-forward">
-                Fully decoupled frontend with catalog data taken directly from the database and Turbolinks for smooth page transitions.
+                Fully decoupled frontend with catalog data taken directly from the database and Turbo for smooth page transitions.
             </x-feature>
             <x-feature title="Future proof" icon="shield-check">
                 The latest techniques and features are used like Laravel Blade Components, TailwindCSS JIT mode and GraphQL.
