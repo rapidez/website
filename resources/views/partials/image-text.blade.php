@@ -1,4 +1,4 @@
-<div class="mx-auto mb-12 flex max-w-7xl flex-col gap-20 px-6 md:mb-32 md:px-6 md:gap-28">
+<div class="mx-auto mb-12 flex max-w-7xl flex-col gap-20 px-6 md:mb-32 md:gap-28">
     <div class="grid items-center gap-x-60 gap-y-6 md:grid-cols-2">
         <div class="flex flex-col items-start max-md:order-last">
             <span class="text-sm text-green-600">
