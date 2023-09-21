@@ -67,7 +67,7 @@
             </div>
         </div>
         <div class="relative max-md:ml-20 max-md:mr-[calc(50%-50vw)] md:ml-[calc(50%-50vw)]">
-            <x-icon-rocket class="absolute max-md:left-0 h-[300px] translate-x-[-240px] text-gray-100 max-md:top-1/2 max-md:-translate-y-1/2 md:bottom-0 md:right-0 md:h-[570px] md:translate-x-[175px]" />
+            <x-icon-rocket class="absolute max-md:left-0 h-[300px] translate-x-60 text-gray-100 max-md:top-1/2 max-md:-translate-y-1/2 md:bottom-0 md:right-0 md:h-[570px] md:translate-x-[175px]" />
             <div class="flex flex-col rounded-2xl drop-shadow-toolbar">
                 <div class="relative flex gap-3 rounded-t-2xl bg-white p-3 md:px-4 md:py-3.5">
                     @foreach (['hover:bg-red-500', 'hover:bg-amber-500', 'hover:bg-secondary-100'] as $color)
