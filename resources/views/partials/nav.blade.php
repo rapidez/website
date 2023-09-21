@@ -37,9 +37,9 @@
     </div>
 
     <div x-show="mobile_menu" class="z-10">
-        <div class="absolute w-screen h-screen bg-black bg-opacity-30 z-30 inset-0 md:hidden"></div>
-        <div class="absolute z-30 top-0 inset-x-0 p-2 sm:pt-5 transition transform origin-top-right md:hidden">
-            <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+        <div class="absolute w-screen h-screen bg-black/30 z-30 inset-0 md:hidden"></div>
+        <div class="absolute z-30 top-0 inset-x-0 p-2 sm:pt-5 transition origin-top-right md:hidden">
+            <div class="rounded-lg shadow-lg ring-1 ring-black/5 bg-white divide-y-2 divide-gray-50">
                 <div class="pt-4 pb-6 px-4">
                     <div class="flex items-center justify-between -mt-px sm:mt-px">
                         <div>
