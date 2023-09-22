@@ -16,7 +16,7 @@
         </div>
     </div>
     @include('partials.in-development')
-    <div class="flex flex-col items-center py-32 text-center">
+    <div class="container mx-auto flex max-w-7xl flex-col items-center px-6 py-20 md:py-32 text-center">
         <h2 class="text-3xl font-semibold md:text-4xl">
             <span class="text-heading">Your</span>
             <span class="text-secondary-100">project</span>
