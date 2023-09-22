@@ -1,3 +1,4 @@
+
 @props(['logo', 'title', 'category'])
 <a {{ $attributes }} class="flex flex-col gap-4 rounded-lg border border-gray-200 px-6 py-8">
     <div class="flex justify-between gap-16">
@@ -13,7 +14,7 @@
             {{ $title }}
         </h3>
     @endisset
-    @if ($slot)
+    @isset ($slot)
         <span class="text-sm text-inactive h-24 line-clamp-5">
             {{ $slot }}
         </span>
