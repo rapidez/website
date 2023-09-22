@@ -14,7 +14,7 @@
             {{ $title }}
         </h3>
     @endisset
-    @if ($slot)
+    @isset ($slot)
         <span class="text-sm text-inactive h-24 line-clamp-5">
             {{ $slot }}
         </span>
