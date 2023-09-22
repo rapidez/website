@@ -4,24 +4,32 @@
 @section('description', 'Awesome webshops build with Rapidez')
 
 @section('content')
-    <div class="bg-gray-100">
-        <div class="container max-w-7xl mx-auto pt-20 px-6">
-            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-center text-secondary-100">Showcases</h1>
-            <p class="text-center">Some awesome Rapidez projects!</p>
-            <div class="grid sm:grid-cols-2 gap-10 mt-20">
-                @foreach(File::files(resource_path('views/content/showcases')) as $file)
-                    <div class="prose max-w-none">
-                        {!! Str::replaceLast('<a', '<a target="_blank" class="whitespace-nowrap inline-flex items-center content-center justify-center border border-transparent px-6 py-3 rounded-full text-base !font-bold !text-white !no-underline bg-secondary-100 opacity-100 hover:opacity-80 transition duration-150 ease-in-out"', Str::markdown(file_get_contents($file->getPathname()))) !!}
-                    </div>
-                @endforeach
-            </div>
-            <div class="text-center py-20">
-                <a href="https://github.com/rapidez/website/tree/master/resources/views/content/showcases" target="_blank" class="bg-gradient-to-b from-primary-100 to-primary-200 w-full py-3 px-6 rounded-full text-white font-bold border border-transparent opacity-100 hover:opacity-70 transition duration-150 ease-in-out">
-                    Add your project
-                </a>
-            </div>
+    <div class="container mx-auto max-w-7xl px-6 pt-20">
+        <h1 class="text-center text-3xl font-extrabold tracking-tight text-secondary-100 sm:text-4xl">Showcases</h1>
+        <p class="text-center">Some awesome Rapidez projects!</p>
+        <div class="mt-20 grid gap-28">
+            @php($showcases = File::files(resource_path('views/content/showcases')))
+            @foreach ($showcases as $file)
+                @php($name = Str::of($file->getFilename())->replace('.blade.php', ''))
+                @include('content.showcases.' . $name, ['overview' => true])
+            @endforeach
         </div>
     </div>
+    @include('partials.in-development')
+    <div class="flex flex-col items-center py-32 text-center">
+        <h2 class="text-3xl font-semibold md:text-4xl">
+            <span class="text-heading">Your</span>
+            <span class="text-secondary-100">project</span>
+            <span class="text-heading">here?</span>
+        </h2>
+        <span class="mt-2">
+            Show how Rapidez helped you make an excellent Magento project.
+        </span>
+        <x-button href="https://github.com/rapidez/website/tree/master/resources/views/content/showcases" target="_blank" class="mt-10 bg-primary-100 text-base font-semibold text-white">
+            Add your project
+        </x-button>
+    </div>
+    @include('partials.seperator-logo')
     @include('partials.seperator-clouds')
     @include('partials.call-to-action')
 @endsection
