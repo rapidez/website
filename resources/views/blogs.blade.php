@@ -4,20 +4,34 @@
 @section('description', 'The latest Rapidez news')
 
 @section('content')
-    <div class="bg-gray-100">
-        <div class="container max-w-7xl mx-auto pt-20 px-6">
-            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-center text-secondary-100">Blog</h1>
-            @foreach(File::files(resource_path('views/content/blogs')) as $file)
-                <div class="prose max-w-none py-10">
-                    {!! Str::of(file_get_contents($file->getPathname()))
-                        ->markdown()
-                        ->replace('<h1', '<h2')
-                        ->before('</p>') !!}
-                    <div>
-                        <a href="/blog/{{ Str::of($file->getFilename())->after('-')->before('.md') }}" class="whitespace-nowrap inline-flex items-center content-center justify-center border border-transparent px-6 py-3 rounded-full text-base !font-bold !text-white !no-underline bg-secondary-100 opacity-100 hover:opacity-80 transition duration-150 ease-in-out mt-5">Read more</a>
+    <div class="relative py-16">
+        <div class="absolute inset-x-0 bottom-0 h-96 bg-gray-100"></div>
+        <div class="container relative mx-auto max-w-7xl px-6">
+            <div class="flex gap-8 max-lg:flex-col">
+                @foreach ($blogs->slice(0, 1) as $blog)
+                    <a href="/blog/{{ $blog }}" class="flex w-full [&>*>div>h3]:text-3xl lg:[&>*>div>h3]:text-4xl lg:[&>*>img]:h-[416px]">
+                        @include('content.blogs.' . $blog, ['overview' => true])
+                    </a>
+                @endforeach
+                @if (count($blogs) > 1)
+                    <div class="flex flex-col gap-8 lg:w-2/3">
+                        @foreach ($blogs->slice(1, 2) as $blog)
+                            <a href="/blog/{{ $blog }}" class="flex lg:h-48 lg:[&>*>img]:aspect-square [&>*]:gap-8 lg:[&>*]:flex-row">
+                                @include('content.blogs.' . $blog, ['overview' => true])
+                            </a>
+                        @endforeach
                     </div>
+                @endif
+            </div>
+            @if (count($blogs) > 3)
+                <div class="mt-16 grid gap-x-8 gap-y-16 lg:grid-cols-2 lg:border-t lg:pt-16">
+                    @foreach ($blogs->slice(3) as $blog)
+                        <a href="/blog/{{ $blog }}" class="flex">
+                            @include('content.blogs.' . $blog, ['overview' => true])
+                        </a>
+                    @endforeach
                 </div>
-            @endforeach
+            @endif
         </div>
     </div>
     @include('partials.seperator-clouds')
