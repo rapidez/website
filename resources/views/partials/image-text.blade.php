@@ -4,7 +4,7 @@
             <span class="text-sm text-secondary-100">
                 Why did we start with Rapidez
             </span>
-            <h2 class="mt-2 text-4xl font-semibold text-heading">
+            <h2 class="mt-2 text-3xl md:text-4xl font-semibold text-heading">
                 We became tired of using the impossible front-end of Magento
             </h2>
             <span class="mt-8 text-lg text-inactive">
@@ -32,7 +32,7 @@
             <span class="text-sm text-secondary-100">
                 Easy to use
             </span>
-            <h2 class="mt-2 text-4xl font-semibold text-heading">
+            <h2 class="mt-2 text-3xl md:text-4xl font-semibold text-heading">
                 So we created Rapidez, a headless Magento 2 based platform
             </h2>
             <span class="mt-8 text-lg text-inactive">
