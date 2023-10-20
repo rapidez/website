@@ -11,10 +11,10 @@
         <span class="text-sm text-secondary-100">{{ $subtitle }}</span>
         <h3 class="mt-2 text-2xl font-semibold text-cyan-900 md:text-3xl">{{ $title }}</h3>
         <div class="prose mt-8 max-w-none text-sm leading-6 text-inactive prose-a:text-inactive">{{ $slot }}</div>
-        @if ($brands ?? '')
+        {{-- @if ($brands ?? '')
             <div class="mt-8 flex flex-wrap gap-2 [&>*]:object-contain">
                 {{ $brands }}
             </div>
-        @endif
+        @endif --}}
     </div>
 </div>

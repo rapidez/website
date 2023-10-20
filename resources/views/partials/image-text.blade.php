@@ -8,7 +8,7 @@
                 We became tired of using the impossible front-end of Magento
             </h2>
             <span class="mt-8 text-lg text-inactive">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula
+                We alle know the struggle of working with the Front-end of Magento. So many unnecessary code and wasting too much time trying to fix every problem.
             </span>
         </div>
         <div class="relative mr-[calc(50%-50vw)] max-md:ml-20">
@@ -36,11 +36,11 @@
                 So we created Rapidez, a headless Magento 2 based platform
             </h2>
             <span class="mt-8 text-lg text-inactive">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula
+                You are free to use the CSS-Framework you want. Now you have the complete freedom to work with what you love and know.
             </span>
             <x-button href="https://docs.rapidez.io/" class="mt-8">View documentation</x-button>
             <div class="mt-16 flex flex-col gap-4 border-t pt-16">
-                <a href="#" class="flex items-center gap-3">
+                <a href="https://docs.rapidez.io/1.x/package-development.html" class="flex items-center gap-3">
                     <x-icon-rocket-sm class="h-5 text-gray-400" />
                     <span>
                         <strong>23</strong>
@@ -48,7 +48,7 @@
                     </span>
                     <x-heroicon-o-external-link class="h-4 text-inactive" />
                 </a>
-                <a href="#" class="flex items-center gap-3">
+                <a href="https://docs.rapidez.io/1.x/tips.html#lighthouse" class="flex items-center gap-3">
                     <x-icon-rocket-sm class="h-5 text-gray-400" />
                     <span>
                         <strong class="text-heading">94</strong>
@@ -56,7 +56,7 @@
                     </span>
                     <x-heroicon-o-external-link class="h-4 text-inactive" />
                 </a>
-                <a href="#" class="flex items-center gap-3">
+                <a href="https://docs.rapidez.io/1.x/installation.html" class="flex items-center gap-3">
                     <x-icon-rocket-sm class="h-5 text-gray-400" />
                     <span>
                         <strong class="text-heading">2</strong>

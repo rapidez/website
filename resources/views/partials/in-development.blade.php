@@ -7,14 +7,14 @@
         <div class="absolute left-0 aspect-square w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-600 opacity-30 blur-[130px] max-lg:top-0 lg:bottom-0 lg:translate-y-1/2"></div>
         <div class="absolute right-0 aspect-video w-[670px] translate-x-1/2 translate-y-1/2 rounded-full bg-secondary-100 opacity-30 blur-[130px] max-lg:bottom-0 lg:top-0 lg:-translate-y-1/2"></div>
         <div class="relative grid gap-8 lg:grid-cols-3">
-            <x-card.project image="/img/vlaming.png" title="Vlaming Groep">
-                Ranzijn tuin & dier is a specialty store where you can find everything for your garden, pets, and home. Ranzijn tuin & dier has 15 offline locations and an overarching webshop where you can order products online.
+            <x-card.project image="/img/irridelta.svg" title="Irridelta">
+                The company which is part of Vlaming Group specialises in the entire delivery package aimed at water technology. They deliver around 90% via their webshop.
             </x-card.project>
-            <x-card.project image="/img/pd.png" title="Packagin Direct">
-                Ranzijn tuin & dier is a specialty store where you can find everything for your garden, pets, and home. Ranzijn tuin & dier has 15 offline locations and an overarching webshop where you can order products online.
+            <x-card.project image="/img/pd.png" title="Packaging Direct">
+                The e-commerce company specialised in a wide variety in different packaging solutions, disposables and printable packaging. The shop has around 20.000 customers each year.
             </x-card.project>
             <x-card.project image="/img/rozenkelim.png" title="Rozenkelim">
-                Ranzijn tuin & dier is a specialty store where you can find everything for your garden, pets, and home. Ranzijn tuin & dier has 15 offline locations and an overarching webshop where you can order products online.
+                You can buy many different beautifull rugs with al kinds of styles, colors and materials. The company also offers pillows, towels, furniture and more.
             </x-card.project>
         </div>
     </div>
