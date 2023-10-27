@@ -4,9 +4,8 @@
 @section('description', 'Awesome webshops build with Rapidez')
 
 @section('content')
-    <div class="container mx-auto max-w-7xl px-6 pt-20">
-        <h1 class="text-center text-3xl font-extrabold tracking-tight text-secondary-100 sm:text-4xl">Showcases</h1>
-        <p class="text-center">Some awesome Rapidez projects!</p>
+@include('partials.hero-simple', ['heading' => 'Projects made with', 'subheading' => 'Rapidez'])
+    <div class="container mx-auto max-w-7xl px-6">
         <div class="mt-20 grid gap-28">
             @php($showcases = File::files(resource_path('views/content/showcases')))
             @foreach ($showcases as $file)
