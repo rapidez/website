@@ -23,7 +23,7 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="relative h-screen antialiased font-sans">
-    <img src="/img/rapidez-bg.jpg" class="absolute inset-0 h-full w-full"></img>
+    <div class="absolute inset-0 h-full w-full bg-gradient-to-br from-secondary-900 from-30% to-secondary-100"></div>
     <div class="flex flex-col relative">
         <div class="min-h-screen flex items-center justify-center">
             <div class="flex flex-col justify-around h-full">

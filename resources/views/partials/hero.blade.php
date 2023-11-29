@@ -1,6 +1,6 @@
 <!-- start hero -->
 <div class="hero relative z-10 w-full overflow-hidden mt-[-125px] pt-[125px]">
-    <img src="/img/rapidez-bg.jpg" class="absolute inset-0 h-full w-full"></img>
+    <div class="absolute inset-0 h-full w-full bg-gradient-to-br from-secondary-900 from-30% to-secondary-100"></div>
     <div class="max-w-7xl mx-auto px-6 pb-10 lg:py-20 relative z-10">
         <div class="flex max-lg:flex-col">
             <div class="flex flex-col lg:flex-1">
