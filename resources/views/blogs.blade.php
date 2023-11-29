@@ -4,6 +4,7 @@
 @section('description', 'The latest Rapidez news')
 
 @section('content')
+@include('partials.hero-simple', ['heading' => 'Read our', 'subheading' => 'Blogs'])
     <div class="relative py-16">
         <div class="absolute inset-x-0 bottom-0 h-96 bg-gray-100"></div>
         <div class="container relative mx-auto max-w-7xl px-6">

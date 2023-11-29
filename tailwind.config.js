@@ -13,6 +13,7 @@ module.exports = {
                 secondary: {
                     100: "#27AE60",
                     200: "#34CDB1",
+                    900: "#002f36",
                 },
                 heading: "#213F60",
                 inactive: "#577C87"
