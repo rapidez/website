@@ -19,7 +19,6 @@ use Illuminate\Support\Facades\Validator;
 |
 */
 
-Route::view('/', 'home');
 Route::view('showcases', 'showcases');
 Route::get('blog/{slug}', function ($slug) {
     return view('blog', ['slug' => $slug]);

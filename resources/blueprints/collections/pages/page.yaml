@@ -24,4 +24,6 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
+          -
+            import: meta_data
 title: Page
