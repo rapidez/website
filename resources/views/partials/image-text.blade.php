@@ -2,13 +2,13 @@
     <div class="grid items-center gap-x-60 gap-y-6 md:grid-cols-2">
         <div class="flex flex-col items-start max-md:order-last">
             <span class="text-sm text-secondary-100">
-                Why did we start with Rapidez
+                 Makes Magento frontend a piece of cake
             </span>
             <h2 class="mt-2 text-3xl md:text-4xl font-semibold text-heading">
-                We became tired of using the impossible front-end of Magento
+                Revolutionize your Magento 2 webshop
             </h2>
             <span class="mt-8 text-lg text-inactive">
-                We alle know the struggle of working with the Front-end of Magento. So many unnecessary code and wasting too much time trying to fix every problem.
+                Rapidez aims to upgrade your Magento 2 webshop experience by providing an exceptionally fast and easily customizable headless frontend. Rapidez delivers a green score on Google Lighthouse.
             </span>
         </div>
         <div class="relative mr-[calc(50%-50vw)] max-md:ml-20">
@@ -30,13 +30,13 @@
     <div class="grid items-center gap-x-60 gap-y-6 md:grid-cols-2">
         <div class="order-last flex flex-col items-start">
             <span class="text-sm text-secondary-100">
-                Easy to use
+                The power of Laravel and Magento
             </span>
             <h2 class="mt-2 text-3xl md:text-4xl font-semibold text-heading">
-                So we created Rapidez, a headless Magento 2 based platform
+                Reduce cost and the time to market
             </h2>
             <span class="mt-8 text-lg text-inactive">
-                You are free to use the CSS-Framework you want. Now you have the complete freedom to work with what you love and know.
+                Developing Rapidez we kept it simple. Which makes development easier and faster. Developers freedom to use want and makes development easier.
             </span>
             <x-button href="https://docs.rapidez.io/" class="mt-8">View documentation</x-button>
             <div class="mt-16 flex flex-col gap-4 border-t pt-16">
