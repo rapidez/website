@@ -18,22 +18,22 @@ use Illuminate\Support\Facades\Validator;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//Route::view('/home', 'home');
 Route::view('showcases', 'showcases');
-Route::get('blog/{slug}', function ($slug) {
-    return view('blog', ['slug' => $slug]);
-});
-Route::get('blog', function () {
-    $blogs = Cache::remember('blogs', 86400, function () {
-        return collect(File::files(resource_path('views/content/blogs')))
-            ->map(
-                fn($blog) => Str::of($blog->getFilename())
-                    ->replace('.blade.php', '')
-            );
-    });
-
-    return view('blogs', ['blogs' => $blogs]);
-});
+//Route::get('blog/{slug}', function ($slug) {
+//    return view('blog', ['slug' => $slug]);
+//});
+//Route::get('blog', function () {
+//    $blogs = Cache::remember('blogs', 86400, function () {
+//        return collect(File::files(resource_path('views/content/blogs')))
+//            ->map(
+//                fn($blog) => Str::of($blog->getFilename())
+//                    ->replace('.blade.php', '')
+//            );
+//    });
+//
+//    return view('blogs', ['blogs' => $blogs]);
+//});
 Route::view('slack', 'slack');
 
 Route::post('slack', function (Request $request) {

@@ -22,3 +22,45 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+      -
+        display: Socials
+        fields:
+          -
+            handle: social_twitter_url
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Twitter URL'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: social_github_url
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Github URL'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: slack_page
+            field:
+              collections:
+                - pages
+              type: link
+              display: 'Slack page'
+              icon: link
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false

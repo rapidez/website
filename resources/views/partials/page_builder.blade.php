@@ -1,3 +1,3 @@
-@foreach($page_builder as $component)
-    @includeIf('page_builder.'.$component['type'], ['data' => $component])
+@foreach($page_builder as $set)
+    @includeIf('page-builder.'.$set['type'], $set)
 @endforeach
