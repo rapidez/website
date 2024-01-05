@@ -39,9 +39,11 @@
             <div class="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black/5">
                 <div class="px-4 pb-6 pt-4">
                     <div class="-mt-px flex items-center justify-between sm:mt-px">
-                        <div>
-                            <img src="https://raw.githubusercontent.com/rapidez/art/master/logo.svg" alt="Rapidez" class="mx-auto h-12"/>
-                        </div>
+                        @if($brand->logo ?? false)
+                            <div>
+                                @responsive($brand->logo, ['class' => 'mx-auto h-12'])
+                            </div>
+                        @endif
                         <div class="mt-px">
                             <button
                                 type="button"
