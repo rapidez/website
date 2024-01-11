@@ -517,6 +517,18 @@ fields:
                                   visibility: visible
                                   replicator_preview: true
                                   hide_display: false
+                              -
+                                handle: open_in_new_tab
+                                field:
+                                  default: false
+                                  type: toggle
+                                  display: 'Open in new tab'
+                                  icon: toggle
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
                           usps:
                             display: "USP's"
                             instructions: null
