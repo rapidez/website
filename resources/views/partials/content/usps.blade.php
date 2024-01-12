@@ -1,7 +1,7 @@
 @if($usps ?? false)
     <div class="mt-16 flex flex-col gap-4 border-t pt-16">
         @foreach($usps as $usp)
-            <a href="{{ $usp->usp_link ?? '' }}" class="flex items-center gap-3">
+            <a href="{{ $usp->usp_link ?? '' }}" target="{{ $usp->usp_open_in_new_tab ? '_blank' : '_self' }}" class="flex items-center gap-3">
                 <x-icon-rocket-sm class="h-5 text-gray-400" />
                 <span>
                     <strong>{{ $usp->usp_heading ?? '' }}</strong>

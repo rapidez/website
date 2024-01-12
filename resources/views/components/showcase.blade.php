@@ -1,6 +1,6 @@
 @props(['title' => '', 'subtitle' => '', 'url' => '#', 'image' => ''])
 <div class="flex items-center gap-x-20 max-md:flex-col md:even:flex-row-reverse lg:gap-x-60">
-    <a class="group relative flex-1" href="{{ $url }}">
+    <a class="group relative flex-1" href="{{ $url }}" target="_blank">
         <div class="relative flex p-7">
             <img src="/img/stripes.png" alt="" class="absolute inset-0 translate-y-4 transition duration-500 group-hover:-rotate-6" />
             @if($image ?? false)

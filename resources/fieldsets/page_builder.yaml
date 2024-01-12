@@ -226,6 +226,18 @@ fields:
                                   replicator_preview: true
                                   hide_display: false
                               -
+                                handle: open_in_new_tab
+                                field:
+                                  default: false
+                                  type: toggle
+                                  display: 'Open in new tab'
+                                  icon: toggle
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
                                 handle: logo
                                 field:
                                   max_files: 1
@@ -583,6 +595,18 @@ fields:
                                                 type: link
                                                 display: 'USP - Link'
                                                 icon: link
+                                                listable: hidden
+                                                instructions_position: above
+                                                visibility: visible
+                                                replicator_preview: true
+                                                hide_display: false
+                                            -
+                                              handle: usp_open_in_new_tab
+                                              field:
+                                                default: false
+                                                type: toggle
+                                                display: 'USP - Link - Open in new tab'
+                                                icon: toggle
                                                 listable: hidden
                                                 instructions_position: above
                                                 visibility: visible
@@ -1039,6 +1063,18 @@ fields:
                                                 replicator_preview: true
                                                 hide_display: false
                                                 width: 50
+                                            -
+                                              handle: open_in_new_tab
+                                              field:
+                                                default: false
+                                                type: toggle
+                                                display: 'Open in new tab'
+                                                icon: toggle
+                                                listable: hidden
+                                                instructions_position: above
+                                                visibility: visible
+                                                replicator_preview: true
+                                                hide_display: false
                                   type: replicator
                                   display: Cards
                                   icon: replicator
@@ -1145,6 +1181,18 @@ fields:
                                   type: link
                                   display: Link
                                   icon: link
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: open_in_new_tab
+                                field:
+                                  default: false
+                                  type: toggle
+                                  display: 'Open in new tab'
+                                  icon: toggle
                                   listable: hidden
                                   instructions_position: above
                                   visibility: visible
@@ -1478,6 +1526,18 @@ fields:
                     type: link
                     display: 'Button - Link'
                     icon: link
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: button_open_in_new_tab
+                  field:
+                    default: false
+                    type: toggle
+                    display: 'Button - Open in new tab'
+                    icon: toggle
                     listable: hidden
                     instructions_position: above
                     visibility: visible

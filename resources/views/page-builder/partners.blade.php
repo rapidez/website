@@ -26,7 +26,7 @@
                     @if($column->cards ?? false)
                         <div class="grid gap-x-5 gap-y-6 md:grid-cols-3">
                             @foreach($column->cards ?? [] as $card)
-                                <x-package.card href="{{ $card->link ?? '' }}" logo="{{ $card->raw('icon') ?? '' }}">
+                                <x-package.card href="{{ $card->link ?? '' }}" target="{{ $card->open_in_new_tab ? '_blank' : '_self' }}" logo="{{ $card->raw('icon') ?? '' }}">
                                     @responsive($card->logo, ['class' => 'max-h-7 mx-auto', 'loading' => 'lazy'])
                                 </x-package.card>
                             @endforeach
