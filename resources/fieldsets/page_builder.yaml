@@ -313,7 +313,7 @@ fields:
                     taggable: false
                     push_tags: false
                     multiple: false
-                    clearable: false
+                    clearable: true
                     searchable: true
                     cast_booleans: false
                     type: select
@@ -325,7 +325,6 @@ fields:
                     replicator_preview: true
                     hide_display: false
                     max_items: 1
-                    default: angry-face
                     width: 33
                 -
                   handle: media
