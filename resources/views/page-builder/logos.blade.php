@@ -20,7 +20,7 @@
                 @if(($logo->link ?? false) || ($logo->logo ?? false))
                     @php($logoClass = ($logo->display_larger ?? false) ? 'h-10 sm:h-12' : 'h-10')
                     <div class="flex p-1 sm:p-6 w-full sm:w-1/3">
-                        <a href="{{ $logo->link ?? '' }}" target="_blank" class="bg-gray-100 flex flex-1 p-3 sm:p-6 items-center justify-center rounded-full border-2 border-transparent hover:border-secondary-100 transition ease-in-out">
+                        <a href="{{ $logo->link ?? '' }}" target="{{ $logo->open_in_new_tab ? '_blank' : '_self' }}" class="bg-gray-100 flex flex-1 p-3 sm:p-6 items-center justify-center rounded-full border-2 border-transparent hover:border-secondary-100 transition ease-in-out">
                             @if($logo->logo ?? false)
                                 @responsive($logo->logo, ['class' => $logoClass, 'loading' => 'lazy'])
                             @endif

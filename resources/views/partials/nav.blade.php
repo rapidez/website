@@ -19,7 +19,7 @@
                 <div class="ml-auto">
                     <a
                         href="{{ $header->header_button_link }}"
-                        target="_blank"
+                        target="{{ $header->header_button_open_in_new_tab ? '_blank' : '_self' }}"
                         class="hidden items-center justify-center whitespace-nowrap rounded-full border border-transparent bg-white bg-gradient-to-b px-6 py-3 text-base font-bold text-primary-100 opacity-100 transition duration-150 ease-in-out hover:opacity-70 sm:inline-flex"
                     >
                         {{ $header->header_button_text }}
