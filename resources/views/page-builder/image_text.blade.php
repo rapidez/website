@@ -43,7 +43,7 @@
                     @endif
                 @endif
                 <div class="flex flex-col rounded-2xl drop-shadow-toolbar">
-                    @if($media?->value()?->isImage() ?? false)
+                    @if(($media?->value()?->isImage() ?? false) || ($media?->value()?->isSvg() ?? false))
                         @responsive($media->value(), ['class' => 'max-md::mr-auto relative h-[360px] rounded-bl-2xl object-cover object-left-top md:ml-auto md:h-[720px] md:rounded-b-2xl md:object-right-top'])
                     @elseif(($media?->value()?->isVideo() ?? false) && ($media?->value()?->url() ?? false))
                         <video src="{{ $media->value()->url() }}" loop autoplay muted class="max-md::mr-auto relative h-[360px] rounded-bl-2xl object-cover object-left-top md:ml-auto md:h-[720px] md:rounded-b-2xl md:object-right-top" />
