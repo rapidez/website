@@ -27,6 +27,18 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
     @include('googletagmanager::head')
+
+    <script>
+        window.responsiveResizeObserver = new ResizeObserver((entries) => {
+            entries.forEach(entry => {
+                const imgWidth = entry.target.getBoundingClientRect().width;
+                const multiplier = entry.target.dataset?.sharpen ? 150 : 100;
+                entry.target.parentNode.querySelectorAll('source').forEach((source) => {
+                    source.sizes = Math.ceil(imgWidth / window.innerWidth * multiplier) + 'vw';
+                });
+            });
+        });
+    </script>
 </head>
 <body x-data="{solutions_menu:false, mobile_menu:false}" class="min-h-screen flex flex-col flex-1 font-body overflow-x-hidden antialiased">
     @include('googletagmanager::body')

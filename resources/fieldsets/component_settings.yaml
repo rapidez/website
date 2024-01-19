@@ -1,0 +1,15 @@
+title: 'Component settings'
+fields:
+  -
+    handle: component_id
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Component ID'
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
