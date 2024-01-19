@@ -16,9 +16,9 @@
         <span class="text-heading">here?</span>
     </h2>
     <span class="mt-2">
-            Show how Rapidez helped you make an excellent Magento project.
-        </span>
-    <x-button href="https://github.com/rapidez/website/tree/master/resources/views/content/showcases" target="_blank" class="mt-10 bg-primary-100 text-base font-semibold text-white">
+        Show how Rapidez helped you make an excellent Magento project.
+    </span>
+    <x-button href="mailto:info@rapidez.io" target="_blank" class="mt-10 bg-primary-100 text-base font-semibold text-white">
         Add your project
     </x-button>
 </div>
