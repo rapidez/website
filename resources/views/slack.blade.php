@@ -20,7 +20,7 @@
     <meta name="theme-color" content="#27ae60">
 
     <!-- Styles -->
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    @vite('resources/css/app.css')
 </head>
 <body class="relative h-screen antialiased font-sans">
     <div class="absolute inset-0 h-full w-full bg-gradient-to-br from-secondary-900 from-30% to-secondary-100"></div>
