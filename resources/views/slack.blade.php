@@ -20,15 +20,16 @@
     <meta name="theme-color" content="#27ae60">
 
     <!-- Styles -->
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    @vite('resources/css/app.css')
 </head>
-<body class="bg-gray-200 h-screen antialiased font-sans">
-    <div class="flex flex-col">
+<body class="relative h-screen antialiased font-sans">
+    <div class="absolute inset-0 h-full w-full bg-gradient-to-br from-secondary-900 from-30% to-secondary-100"></div>
+    <div class="flex flex-col relative">
         <div class="min-h-screen flex items-center justify-center">
             <div class="flex flex-col justify-around h-full">
-                <div class="text-center text-gray-800">
+                <div class="text-center text-white">
                     <h1 class="font-semibold tracking-wider text-6xl">
-                        <img src="https://raw.githubusercontent.com/rapidez/art/master/logo.svg" alt="Rapidez" class="w-96 mx-auto">
+                        <x-icon-rapidez-white class="w-auto h-32"/>
                     </h1>
                     <h2 class="text-3xl font-semibold mb-2">Join our Slack!</h2>
                     @if (session('response'))
@@ -37,7 +38,7 @@
                             @dump(session('response'))
                         </div>
                     @else
-                        <form class="m-2 relative" method="POST" action="/slack">
+                        <form class="m-5 relative" method="POST" action="/slack">
                             @csrf
                             <input type="email" name="email" placeholder="Your email" class="bg-gray-100 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 pr-10 text-gray-700 leading-tight focus:outline-none focus:bg-white border-green-400">
                             <button type="submit" class="absolute right-0 top-0 bottom-0 bg-green-400 rounded-r p-2 hover:bg-green-300 text-white">
