@@ -305,6 +305,28 @@ fields:
                     replicator_preview: true
                     hide_display: false
                 -
+                  handle: background_icon
+                  field:
+                    options:
+                      angry-face: 'Angry face'
+                      rocket: Rocket
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    clearable: true
+                    searchable: true
+                    cast_booleans: false
+                    type: select
+                    display: 'Background icon'
+                    icon: select
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    max_items: 1
+                    width: 33
+                -
                   handle: media
                   field:
                     max_files: 1
