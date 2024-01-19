@@ -5,7 +5,6 @@
 /public/css
 /public/hot
 /public/js
-/public/mix-manifest.json
 /public/storage
 /storage/*.key
 /vendor
@@ -16,10 +15,4 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-
-/content/**/*.md
-/content/**/*.yaml
-!/content/collections/*.yaml
-!/content/globals/*.yaml
-!/content/navigation/*.yaml
-!/content/taxonomies/*.yaml
+/.yarn/

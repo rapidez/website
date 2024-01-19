@@ -24,9 +24,13 @@
                         <x-slot name="label" class="{{ $loop->first ? 'rounded-l-lg' :  ($loop->last ? 'rounded-r-lg' : '')}}">{{ $column->title }}</x-slot>
                     @endif
                     @if($column->cards ?? false)
-                        <div class="grid gap-x-5 gap-y-6 md:grid-cols-3">
+                        <div class="grid md:grid-cols-center-3 gap-x-5 gap-y-6">
                             @foreach($column->cards ?? [] as $card)
-                                <x-package.card href="{{ $card->link ?? '' }}" target="{{ $card->open_in_new_tab ? '_blank' : '_self' }}" logo="{{ $card->raw('icon') ?? '' }}">
+                                <x-package.card
+                                    href="{{ $card->link ?? '#' }}"
+                                    target="{{ $card->open_in_new_tab ? '_blank' : '_self' }}"
+                                    logo="{{ $card->raw('icon') ?? '' }}"
+                                >
                                     @responsive($card->logo, ['class' => 'max-h-7 w-auto mx-auto', 'loading' => 'lazy'])
                                 </x-package.card>
                             @endforeach

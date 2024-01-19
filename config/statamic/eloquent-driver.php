@@ -6,7 +6,7 @@ return [
     'table_prefix' => env('STATAMIC_ELOQUENT_PREFIX', 'statamic_'),
 
     'asset_containers' => [
-        'driver' => 'file',
+        'driver' => 'eloquent',
         'model'  => \Statamic\Eloquent\Assets\AssetContainerModel::class,
     ],
 
@@ -30,7 +30,7 @@ return [
     ],
 
     'collection_trees' => [
-        'driver' => 'file',
+        'driver' => 'eloquent',
         'model'  => \Statamic\Eloquent\Structures\TreeModel::class,
         'tree'   => \Statamic\Eloquent\Structures\CollectionTree::class,
     ],
@@ -42,13 +42,13 @@ return [
     ],
 
     'forms' => [
-        'driver'           => 'file',
+        'driver'           => 'eloquent',
         'model'            => \Statamic\Eloquent\Forms\FormModel::class,
         'submission_model' => \Statamic\Eloquent\Forms\SubmissionModel::class,
     ],
 
     'global_sets' => [
-        'driver' => 'file',
+        'driver' => 'eloquent',
         'model'  => \Statamic\Eloquent\Globals\GlobalSetModel::class,
     ],
 
@@ -58,12 +58,12 @@ return [
     ],
 
     'navigations' => [
-        'driver'     => 'file',
+        'driver'     => 'eloquent',
         'model'      => \Statamic\Eloquent\Structures\NavModel::class,
     ],
 
     'navigation_trees' => [
-        'driver' => 'file',
+        'driver' => 'eloquent',
         'model'  => \Statamic\Eloquent\Structures\TreeModel::class,
         'tree'   => \Statamic\Eloquent\Structures\NavTree::class,
     ],
@@ -74,7 +74,7 @@ return [
     ],
 
     'taxonomies' => [
-        'driver' => 'file',
+        'driver' => 'eloquent',
         'model'  => \Statamic\Eloquent\Taxonomies\TaxonomyModel::class,
     ],
 

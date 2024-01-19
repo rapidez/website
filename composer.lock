@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5a1053d8b9fb8d54375916d6dec495a4",
+    "content-hash": "66e98632070aa5a596ef7bee3f8558da",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -4745,6 +4745,52 @@
                 }
             ],
             "time": "2023-11-08T05:53:05+00:00"
+        },
+        {
+            "name": "rapidez/blade-directives",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rapidez/blade-directives.git",
+                "reference": "988523aa6b3ed8cbe778e04b68b64f7f37f605fb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rapidez/blade-directives/zipball/988523aa6b3ed8cbe778e04b68b64f7f37f605fb",
+                "reference": "988523aa6b3ed8cbe778e04b68b64f7f37f605fb",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^9.0|^10.0",
+                "php": "^8.0|^8.1|^8.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Rapidez\\BladeDirectives\\BladeDirectivesServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Rapidez\\BladeDirectives\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "description": "Expanded blade directives",
+            "homepage": "https://rapidez.io",
+            "keywords": [
+                "rapidez"
+            ],
+            "support": {
+                "issues": "https://github.com/rapidez/blade-directives/issues",
+                "source": "https://github.com/rapidez/blade-directives/tree/0.2.0"
+            },
+            "time": "2023-12-12T10:54:00+00:00"
         },
         {
             "name": "react/promise",

@@ -30,7 +30,7 @@
             @if($content ?? false)
                 <div class="order-last flex flex-col items-start">
                     @foreach($content as $contentSet)
-                        @includeIf('partials.content.' . $contentSet['type'], $contentSet)
+                        @includeFirstSafe(['partials.content.' . $contentSet['type']], $contentSet)
                     @endforeach
                 </div>
             @endif
