@@ -704,12 +704,6 @@ fields:
                                     - anchor
                                     - underline
                                     - strikethrough
-                                    - small
-                                    - quote
-                                    - table
-                                    - image
-                                    - code
-                                    - codeblock
                                   smart_typography: false
                                   save_html: false
                                   inline: false
