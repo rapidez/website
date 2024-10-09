@@ -5,5 +5,7 @@
         <x-icon name="heroicon-{{ $icon }}" class="h-8 mb-6 text-secondary-100"/>
     @endif
     <h4 class="text-primary-200 font-bold antialiased mb-3">{{ $title }}</h4>
-    <div class="text-sm antialiased leading-normal text-primary-100 text-opacity-60">{{ $slot }}</div>
+    <div class="text-sm antialiased leading-normal text-primary-100 text-opacity-60 [&>a]:text-secondary-100 [&>a]:hover:underline">
+        {{ $slot }}
+    </div>
 </div>
