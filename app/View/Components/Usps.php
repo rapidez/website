@@ -20,7 +20,7 @@ class Usps extends Component
     public function getRepoCount()
     {
         $cacheKey = 'usps.github_repo_count';
-        return Cache::remember($cacheKey, 86400, function () {
+        return Cache::remember($cacheKey, now()->addDay(), function () {
             $response = Http::get('https://api.github.com/orgs/rapidez/repos?per_page=1');
 
             if (!$response->successful()) {
