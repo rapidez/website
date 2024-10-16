@@ -12,13 +12,7 @@ fields:
         - h6
         - bold
         - italic
-        - unorderedlist
-        - orderedlist
         - removeformat
-        - anchor
-        - underline
-        - strikethrough
-        - small
       smart_typography: false
       save_html: false
       inline: false

@@ -12,7 +12,7 @@
     <div class="relative mt-7 w-full">
         <div class="absolute left-0 aspect-square w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-600 opacity-30 blur-[130px] max-lg:top-0 lg:bottom-0 lg:translate-y-1/2"></div>
         <div class="absolute right-0 aspect-video w-[670px] translate-x-1/2 translate-y-1/2 rounded-full bg-secondary-100 opacity-30 blur-[130px] max-lg:bottom-0 lg:top-0 lg:-translate-y-1/2"></div>
-        <div class="relative flex flex-col flex-wrap justify-center gap-8 lg:flex-row">
+        <div class="relative flex max-lg:flex-col flex-wrap justify-center gap-8">
             @foreach ($cards as $card)
                 <x-card.project :image="$card->image" :title="$card->title">
                     {!! $card->text !!}

@@ -95,12 +95,7 @@ fields:
                       - h6
                       - bold
                       - italic
-                      - unorderedlist
-                      - orderedlist
                       - removeformat
-                      - anchor
-                      - underline
-                      - strikethrough
                     smart_typography: false
                     save_html: false
                     inline: false
@@ -144,12 +139,7 @@ fields:
                       - h6
                       - bold
                       - italic
-                      - unorderedlist
-                      - orderedlist
                       - removeformat
-                      - anchor
-                      - underline
-                      - strikethrough
                     smart_typography: false
                     save_html: false
                     inline: false
