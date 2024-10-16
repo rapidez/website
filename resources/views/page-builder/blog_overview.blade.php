@@ -1,5 +1,5 @@
 @php($blogs = \Statamic\Statamic::tag('collection:blog')->fetch())
-<div class="relative py-16">
+<div class="relative py-16 component blog-overview">
     <div class="absolute inset-x-0 bottom-0 h-96 bg-gray-100"></div>
     <div class="container relative mx-auto max-w-7xl px-6">
         <div class="flex gap-8 max-lg:flex-col">

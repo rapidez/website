@@ -1,0 +1,350 @@
+title: 'Image text'
+fields:
+  -
+    import: component_settings
+  -
+    handle: variant
+    field:
+      options:
+        text_left: 'Text left'
+        text_right: 'Text right'
+      taggable: false
+      push_tags: false
+      multiple: false
+      max_items: 1
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: text_left
+      type: select
+      display: Variant
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: background_icon
+    field:
+      options:
+        angry-face: 'Angry face'
+        rocket: Rocket
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: true
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: 'Background icon'
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      max_items: 1
+      width: 33
+  -
+    handle: media
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: Media
+      icon: assets
+      instructions: 'Upload an image or video'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      width: 66
+  -
+    handle: content
+    field:
+      collapse: true
+      previews: true
+      fullscreen: true
+      sets:
+        add_set:
+          display: 'Add set'
+          instructions: null
+          icon: null
+          sets:
+            title:
+              display: Title
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: title
+                  field:
+                    buttons:
+                      - h1
+                      - h2
+                      - h3
+                      - h4
+                      - h5
+                      - h6
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - anchor
+                      - underline
+                      - strikethrough
+                    smart_typography: false
+                    save_html: false
+                    inline: false
+                    toolbar_mode: fixed
+                    reading_time: false
+                    word_count: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    remove_empty_nodes: false
+                    antlers: false
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    always_show_set_button: false
+                    collapse: false
+                    previews: true
+                    type: bard
+                    display: Title
+                    icon: bard
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+            subtitle:
+              display: Subtitle
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: subtitle
+                  field:
+                    buttons:
+                      - h1
+                      - h2
+                      - h3
+                      - h4
+                      - h5
+                      - h6
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - anchor
+                      - underline
+                      - strikethrough
+                    smart_typography: false
+                    save_html: false
+                    inline: false
+                    toolbar_mode: fixed
+                    reading_time: false
+                    word_count: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    remove_empty_nodes: false
+                    antlers: false
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    always_show_set_button: false
+                    collapse: false
+                    previews: true
+                    type: bard
+                    display: Subtitle
+                    icon: bard
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+            text:
+              display: Text
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: text
+                  field:
+                    buttons:
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - anchor
+                      - underline
+                      - strikethrough
+                    smart_typography: false
+                    save_html: false
+                    inline: false
+                    toolbar_mode: fixed
+                    reading_time: false
+                    word_count: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    remove_empty_nodes: false
+                    antlers: false
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    always_show_set_button: false
+                    collapse: false
+                    previews: true
+                    type: bard
+                    display: Text
+                    icon: bard
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+            button:
+              display: Button
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: button_text
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: 'Button text'
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: button_link
+                  field:
+                    type: link
+                    display: 'Button link'
+                    icon: link
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: open_in_new_tab
+                  field:
+                    default: false
+                    type: toggle
+                    display: 'Open in new tab'
+                    icon: toggle
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+            usps:
+              display: "USP's"
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: usps
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      extra_usp:
+                        display: 'Extra USP'
+                        instructions: null
+                        icon: null
+                        sets:
+                          usp:
+                            display: USP
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                handle: usp_heading
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: 'USP - Heading'
+                                  icon: text
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: usp_text
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: 'USP - Text'
+                                  icon: text
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: usp_link
+                                field:
+                                  type: link
+                                  display: 'USP - Link'
+                                  icon: link
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: usp_open_in_new_tab
+                                field:
+                                  default: false
+                                  type: toggle
+                                  display: 'USP - Link - Open in new tab'
+                                  icon: toggle
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                    type: replicator
+                    display: "USP's"
+                    icon: replicator
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    instructions: "use the {repos} placeholder to get the count of repo's we have"
+      type: replicator
+      display: Content
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

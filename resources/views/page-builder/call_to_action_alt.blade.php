@@ -1,4 +1,4 @@
-<div class="container mx-auto flex max-w-7xl flex-col items-center px-6 py-20 md:py-32 text-center">
+<div class="container mx-auto flex max-w-7xl flex-col items-center px-6 text-center component">
     @if($title ?? '')
         <div class="text-3xl font-semibold md:text-4xl text-heading">
             {!! str_replace('<strong', '<strong class="text-secondary-100"', $title) !!}

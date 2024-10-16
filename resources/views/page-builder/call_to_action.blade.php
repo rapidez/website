@@ -1,4 +1,4 @@
-<div class="mt-0 sm:-mt-16 relative z-20">
+<div class="relative z-20 component">
     <div class="max-w-7xl mx-auto py-12 px-4 mb-10 text-center">
         @if($logo ?? false)
             <div class="flex items-center justify-center mb-10">

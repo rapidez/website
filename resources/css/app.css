@@ -4,6 +4,8 @@
 
 @import "tailwindcss/utilities";
 
+@import "spacing";
+
 html {
     scroll-behavior: smooth;
 }

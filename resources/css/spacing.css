@@ -1,0 +1,15 @@
+.component + .component {
+    @apply mt-14 md:mt-20;
+}
+
+.seperator.component + .faq.component,
+.faq.component + .seperator.component,
+.blog-overview.component + .seperator.component,
+.seperator.clouds.component + .component,
+.component.hero + .component {
+    @apply mt-0;
+}
+
+.seperator.component + .seperator.component {
+    @apply mt-0;
+}

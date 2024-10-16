@@ -1,4 +1,4 @@
-<div class="mx-auto mb-12 flex max-w-7xl flex-col gap-20 px-6 md:mb-32 md:gap-28"{{ ($component_id ?? false) ? " id=" . $component_id : "" }}>
+<div class="mx-auto flex max-w-7xl flex-col gap-20 px-6 component md:gap-28"{{ ($component_id ?? false) ? " id=" . $component_id : "" }}>
     @if(($variant->value()->value() ?? '') === 'text_left')
         <div class="grid items-center gap-x-60 gap-y-6 md:grid-cols-2">
             @if($content ?? false)

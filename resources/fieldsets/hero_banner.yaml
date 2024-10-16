@@ -1,0 +1,109 @@
+title: 'Hero banner'
+fields:
+  -
+    import: component_settings
+  -
+    handle: variant
+    field:
+      options:
+        default: Default
+        simple: Simple
+      taggable: false
+      push_tags: false
+      multiple: false
+      max_items: 1
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: default
+      type: select
+      display: Variant
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: heading
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Heading
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      width: 50
+  -
+    handle: subheading
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Subheading
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      width: 50
+  -
+    handle: text
+    field:
+      buttons:
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - anchor
+        - underline
+        - strikethrough
+      smart_typography: false
+      save_html: false
+      inline: false
+      toolbar_mode: fixed
+      reading_time: false
+      word_count: false
+      fullscreen: true
+      allow_source: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      remove_empty_nodes: false
+      antlers: false
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      always_show_set_button: false
+      collapse: false
+      previews: true
+      type: bard
+      display: Text
+      icon: bard
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        variant: 'equals default'
+  -
+    handle: youtube_embed_url
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Youtube embed URL'
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        variant: 'equals default'
