@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "66e98632070aa5a596ef7bee3f8558da",
+    "content-hash": "d66f0f8430847d7ea94f792b4d1266df",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -4748,20 +4748,20 @@
         },
         {
             "name": "rapidez/blade-directives",
-            "version": "0.2.0",
+            "version": "0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rapidez/blade-directives.git",
-                "reference": "988523aa6b3ed8cbe778e04b68b64f7f37f605fb"
+                "reference": "e8bfbfe8b641843e1658659bf83c09e6af214212"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rapidez/blade-directives/zipball/988523aa6b3ed8cbe778e04b68b64f7f37f605fb",
-                "reference": "988523aa6b3ed8cbe778e04b68b64f7f37f605fb",
+                "url": "https://api.github.com/repos/rapidez/blade-directives/zipball/e8bfbfe8b641843e1658659bf83c09e6af214212",
+                "reference": "e8bfbfe8b641843e1658659bf83c09e6af214212",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "^9.0|^10.0",
+                "illuminate/support": "^9.0|^10.0|^11.0",
                 "php": "^8.0|^8.1|^8.2"
             },
             "type": "library",
@@ -4773,6 +4773,9 @@
                 }
             },
             "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
                 "psr-4": {
                     "Rapidez\\BladeDirectives\\": "src"
                 }
@@ -4788,9 +4791,9 @@
             ],
             "support": {
                 "issues": "https://github.com/rapidez/blade-directives/issues",
-                "source": "https://github.com/rapidez/blade-directives/tree/0.2.0"
+                "source": "https://github.com/rapidez/blade-directives/tree/0.6.0"
             },
-            "time": "2023-12-12T10:54:00+00:00"
+            "time": "2024-05-28T06:35:08+00:00"
         },
         {
             "name": "react/promise",
@@ -11267,5 +11270,5 @@
         "php": "^8.1|^8.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
