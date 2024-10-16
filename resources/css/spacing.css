@@ -6,10 +6,7 @@
 .faq.component + .seperator.component,
 .blog-overview.component + .seperator.component,
 .seperator.clouds.component + .component,
-.component.hero + .component {
-    @apply mt-0;
-}
-
+.component.hero + .component,
 .seperator.component + .seperator.component {
     @apply mt-0;
 }
