@@ -1,0 +1,108 @@
+title: FAQ
+fields:
+  -
+    import: component_settings
+  -
+    handle: title_heading
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Title - Heading'
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      width: 50
+  -
+    handle: title_subheading
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Title - Subheading'
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      width: 50
+  -
+    handle: columns
+    field:
+      collapse: true
+      previews: true
+      fullscreen: true
+      sets:
+        extra_column:
+          display: 'Extra column'
+          instructions: null
+          icon: null
+          sets:
+            new_set:
+              display: Column
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: title
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Title
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: text
+                  field:
+                    buttons:
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - removeformat
+                      - anchor
+                      - underline
+                      - strikethrough
+                    smart_typography: false
+                    save_html: false
+                    inline: false
+                    toolbar_mode: fixed
+                    reading_time: false
+                    word_count: false
+                    fullscreen: true
+                    allow_source: true
+                    enable_input_rules: true
+                    enable_paste_rules: true
+                    remove_empty_nodes: false
+                    antlers: false
+                    link_noopener: false
+                    link_noreferrer: false
+                    target_blank: false
+                    always_show_set_button: false
+                    collapse: false
+                    previews: true
+                    type: bard
+                    display: Text
+                    icon: bard
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+      type: replicator
+      display: Columns
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

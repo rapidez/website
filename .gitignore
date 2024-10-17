@@ -1,3 +1,13 @@
+!/content
+/content/navigation/*.yaml
+/content/**/*.md
+/content/**/*.yaml
+!/content/navigation/*.yaml
+!/content/assets/*.yaml
+!/content/collections/*.yaml
+!/content/taxonomies/*.yaml
+!/content/globals/*.yaml
+
 /node_modules
 /public/vendor
 /public/assets

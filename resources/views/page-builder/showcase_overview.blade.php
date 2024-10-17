@@ -1,5 +1,5 @@
 @include('partials.hero-simple', ['heading' => 'Projects made with', 'subheading' => 'Rapidez'])
-<div class="container mx-auto max-w-7xl px-6">
+<div class="container mx-auto max-w-7xl px-6 component">
     <div class="mt-20 grid gap-28">
         @php($showcases = \Statamic\Statamic::tag('collection:showcases')->fetch())
         @foreach ($showcases as $showcase)
@@ -9,7 +9,7 @@
         @endforeach
     </div>
 </div>
-<div class="container mx-auto flex max-w-7xl flex-col items-center px-6 py-20 md:py-32 text-center">
+<div class="container mx-auto flex max-w-7xl flex-col items-center px-6 text-center component">
     <h2 class="text-3xl font-semibold md:text-4xl">
         <span class="text-heading">Your</span>
         <span class="text-secondary-100">project</span>
