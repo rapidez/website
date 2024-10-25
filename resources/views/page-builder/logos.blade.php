@@ -1,16 +1,9 @@
 <div id="{{ $component_id }}" class="component relative flex flex-col">
     <div class="relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-6">
-        @if ($title_heading || $title_subheading)
-            <h2 class="mb-0 mt-10 text-center text-3xl font-extrabold tracking-tight sm:mt-0 sm:text-4xl">
-                @if ($title_heading)
-                    <span class="bg-clip-text pb-1 text-secondary-100">{{ $title_heading }}</span>
-                @endif
-                @if ($title_subheading)
-                    <span class="bg-gradient-to-b from-primary-100 to-primary-200 bg-clip-text pb-2 text-transparent">
-                        {{ $title_subheading }}
-                    </span>
-                @endif
-            </h2>
+        @if ($title_heading)
+            <div class="text-center text-3xl font-extrabold tracking-tight text-heading prose-strong:text-secondary-100 sm:text-4xl">
+                {!! $title_heading !!}
+            </div>
         @endif
         @if ($subtitle)
             <div class="mt-5 text-center text-primary-100">{!! $subtitle !!}</div>

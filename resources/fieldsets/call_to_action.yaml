@@ -4,32 +4,7 @@ fields:
     import: component_settings
   -
     handle: title_heading
-    field:
-      input_type: text
-      antlers: false
-      type: text
-      display: 'Title - Heading'
-      icon: text
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
-      width: 50
-  -
-    handle: title_subheading
-    field:
-      input_type: text
-      antlers: false
-      type: text
-      display: 'Title - Subheading'
-      icon: text
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
-      width: 50
+    field: title.title
   -
     handle: logo
     field:
@@ -42,7 +17,6 @@ fields:
       show_set_alt: true
       type: assets
       display: Logo
-      icon: assets
       listable: hidden
       instructions_position: above
       visibility: visible
@@ -67,44 +41,9 @@ fields:
               icon: null
               fields:
                 -
-                  handle: text
-                  field:
-                    input_type: text
-                    antlers: false
-                    type: text
-                    display: Text
-                    icon: text
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    replicator_preview: true
-                    hide_display: false
-                -
-                  handle: link
-                  field:
-                    type: link
-                    display: Link
-                    icon: link
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    replicator_preview: true
-                    hide_display: false
-                -
-                  handle: open_in_new_tab
-                  field:
-                    default: false
-                    type: toggle
-                    display: 'Open in new tab'
-                    icon: toggle
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    replicator_preview: true
-                    hide_display: false
+                  import: button
       type: replicator
       display: Buttons
-      icon: replicator
       listable: hidden
       instructions_position: above
       visibility: visible

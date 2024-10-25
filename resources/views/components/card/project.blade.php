@@ -4,7 +4,7 @@
         @responsive($image, ['class' => 'max-h-[70px] max-w-[120px]', 'loading' => 'lazy'])
     @endif
     <div class="">
-        <h3 class="mt-8 text-lg font-semibold text-cyan-900 md:text-2xl">{{ $title }}</h3>
-        <div class="prose mt-4 max-w-none text-sm leading-6 text-inactive prose-a:text-inactive">{{ $slot }}</div>
+        <h3 class="mt-8 text-lg font-semibold text-cyan-900 md:text-2xl">{!! $title !!}</h3>
+        <div class="prose mt-4 max-w-none text-sm leading-6 text-inactive prose-a:text-inactive">{!! $slot !!}</div>
     </div>
 </div>

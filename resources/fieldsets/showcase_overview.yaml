@@ -2,27 +2,9 @@ title: 'Showcase overview'
 fields:
   -
     handle: title_heading
-    field:
-      input_type: text
-      antlers: false
-      type: text
-      display: 'Title - Heading'
-      icon: text
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
+    field: title.title
   -
     handle: title_subheading
-    field:
-      input_type: text
-      antlers: false
-      type: text
-      display: 'Title - Subheading'
-      icon: text
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
+    field: title.title
+    config:
+      display: Subtitle

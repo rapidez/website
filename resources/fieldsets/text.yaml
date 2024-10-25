@@ -1,4 +1,4 @@
-title: Content
+title: Text
 fields:
   -
     handle: text
@@ -20,7 +20,6 @@ fields:
         - strikethrough
         - small
         - quote
-        - table
         - image
         - code
         - codeblock
@@ -44,7 +43,6 @@ fields:
       previews: true
       type: bard
       display: Text
-      icon: bard
       listable: hidden
       instructions_position: above
       visibility: visible

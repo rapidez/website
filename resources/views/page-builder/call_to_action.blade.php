@@ -1,21 +1,14 @@
-<div class="relative z-20 component">
+<div class="component relative z-20">
     <div class="mx-auto mb-10 max-w-7xl px-4 py-12 text-center">
         @if ($logo)
             <div class="mb-10 flex items-center justify-center">
                 @responsive($logo, ['class' => 'w-16', 'loading' => 'lazy'])
             </div>
         @endif
-        @if ($title_heading || $title_subheading)
-            <h2 class="text-3xl font-extrabold tracking-tight sm:text-5xl">
-                @if ($title_heading)
-                    <span class="block bg-gradient-to-b from-primary-100 to-primary-200 bg-clip-text pb-1 text-transparent">{{ $title_heading }}</span>
-                @endif
-                @if ($title_subheading)
-                    <span class="block bg-gradient-to-b from-primary-100 to-primary-200 bg-clip-text pb-2 text-transparent">
-                        {{ $title_subheading }}
-                    </span>
-                @endif
-            </h2>
+        @if ($title_heading)
+            <div class="text-pretty mx-auto max-w-3xl pb-1 text-3xl font-extrabold tracking-tight text-heading prose-strong:text-secondary-100 sm:text-5xl">
+                {!! $title_heading !!}
+            </div>
         @endif
         @if ($buttons && $buttons?->value())
             <div class="mt-8 flex items-center justify-center max-sm:flex-col sm:flex-wrap">

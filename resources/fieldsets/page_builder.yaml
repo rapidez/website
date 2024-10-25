@@ -72,12 +72,12 @@ fields:
                 -
                   import: call_to_action
             content:
-              display: Content
+              display: Text
               instructions: null
               icon: null
               fields:
                 -
-                  import: content
+                  import: text
             blog_overview:
               display: 'Blog overview'
               instructions: null

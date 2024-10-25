@@ -1,11 +1,11 @@
 <div class="component container relative mx-auto flex max-w-7xl flex-col items-center px-6">
     @if ($title_heading || $title_subheading)
         @if ($title_subheading)
-            <span class="text-center text-sm text-secondary-100">{{ $title_subheading }}</span>
+            <span class="text-center text-sm text-secondary-100">{!! $title_subheading !!}</span>
         @endif
         @if ($title_heading)
             <h2 class="mt-1 text-center text-4xl font-semibold text-cyan-900">
-                {{ $title_heading }}
+                {!! $title_heading !!}
             </h2>
         @endif
     @endif

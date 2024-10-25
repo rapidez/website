@@ -1,15 +1,8 @@
 <div id="{{ $component_id }}" class="component mx-auto flex max-w-5xl flex-col items-center px-6">
-    @if ($title_heading || $title_subheading)
-        <h2 class="text-3xl font-semibold md:text-4xl">
-            @if ($title_heading)
-                <span class="text-heading">{{ $title_heading }}</span>
-            @endif
-            @if ($title_subheading)
-                <span class="text-secondary-100">
-                    {{ $title_subheading }}
-                </span>
-            @endif
-        </h2>
+    @if ($title_heading)
+        <div class="text-3xl font-semibold text-heading prose-strong:text-secondary-100 md:text-4xl">
+            {!! $title_heading !!}
+        </div>
     @endif
     @if ($text)
         <div class="mt-6 max-w-md text-center text-sm text-heading">
