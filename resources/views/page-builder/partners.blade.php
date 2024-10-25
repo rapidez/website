@@ -1,4 +1,4 @@
-<div class="mx-auto mb-12 flex max-w-5xl flex-col items-center px-6 md:mb-32" :id="$component_id ?? false">
+<div class="mx-auto mb-12 flex max-w-5xl flex-col items-center px-6 md:mb-32" id="{{ $component_id }}">
     @if (($title_heading ?? false) || ($title_subheading ?? false))
         <h2 class="text-3xl font-semibold md:text-4xl">
             @if ($title_heading ?? false)

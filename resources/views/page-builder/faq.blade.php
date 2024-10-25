@@ -1,4 +1,4 @@
-<div class="relative z-10 bg-gray-100 pt-16 sm:pt-32" :id="$component_id ?? false">
+<div class="relative z-10 bg-gray-100 pt-16 sm:pt-32" id="{{ $component_id }}">
     <div class="relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-6">
         @if (($title_heading ?? false) || ($title_subheading ?? false))
             <h2 class="text-center text-3xl font-extrabold tracking-tight sm:text-4xl">
