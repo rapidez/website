@@ -1,7 +1,7 @@
 <div class="mx-auto mb-12 flex max-w-7xl flex-col gap-20 px-6 md:mb-32 md:gap-28" id="{{ $component_id }}">
     @if (($variant->value()->value() ?? '') === 'text_left')
         <div class="grid items-center gap-x-60 gap-y-6 md:grid-cols-2">
-            @if ($content ?? false)
+            @if ($content)
                 <div class="flex flex-col items-start max-md:order-last">
                     @foreach ($content as $contentSet)
                         @includeIf('partials.content.' . $contentSet['type'], $contentSet)
@@ -17,9 +17,9 @@
                     @endif
                 @endif
                 <div class="flex flex-col rounded-2xl drop-shadow-toolbar">
-                    @if (($media?->value()?->isImage() ?? false) || ($media?->value()?->isSvg() ?? false))
+                    @if (($media?->value()?->isImage()) || ($media?->value()?->isSvg()))
                         @responsive($media->value(), ['class' => 'relative mr-auto h-[360px] w-full rounded-bl-2xl object-cover object-left-top md:h-[720px] md:rounded-b-2xl'])
-                    @elseif(($media?->value()?->isVideo() ?? false) && ($media?->value()?->url() ?? false))
+                    @elseif(($media?->value()?->isVideo()) && ($media?->value()?->url()))
                         <video src="{{ $media->value()->url() }}" loop autoplay muted class="relative mr-auto h-[360px] w-full rounded-bl-2xl object-cover object-left-top md:h-[720px] md:rounded-b-2xl" />
                     @endif
                 </div>
@@ -27,7 +27,7 @@
         </div>
     @else
         <div class="grid items-center gap-x-60 gap-y-6 md:grid-cols-2">
-            @if ($content ?? false)
+            @if ($content)
                 <div class="order-last flex flex-col items-start">
                     @foreach ($content as $contentSet)
                         @includeFirstSafe(['partials.content.' . $contentSet['type']], $contentSet)
@@ -43,9 +43,9 @@
                     @endif
                 @endif
                 <div class="flex flex-col rounded-2xl drop-shadow-toolbar">
-                    @if (($media?->value()?->isImage() ?? false) || ($media?->value()?->isSvg() ?? false))
+                    @if (($media?->value()?->isImage()) || ($media?->value()?->isSvg()))
                         @responsive($media->value(), ['class' => 'max-md::mr-auto relative h-[360px] rounded-bl-2xl object-cover object-left-top md:ml-auto md:h-[720px] md:rounded-b-2xl md:object-right-top'])
-                    @elseif(($media?->value()?->isVideo() ?? false) && ($media?->value()?->url() ?? false))
+                    @elseif(($media?->value()?->isVideo()) && ($media?->value()?->url()))
                         <video src="{{ $media->value()->url() }}" loop autoplay muted class="max-md::mr-auto relative h-[360px] rounded-bl-2xl object-cover object-left-top md:ml-auto md:h-[720px] md:rounded-b-2xl md:object-right-top" />
                     @endif
                 </div>

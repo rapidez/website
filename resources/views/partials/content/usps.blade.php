@@ -1,3 +1,3 @@
-@if ($usps ?? false)
+@if ($usps)
     <x-usps :$usps />
 @endif

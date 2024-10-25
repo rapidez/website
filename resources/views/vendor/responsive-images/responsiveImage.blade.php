@@ -10,7 +10,7 @@
                     @if($type = $source->getMimeType()) type="{{ $type }}" @endif
                     @if($media = $source->getMediaString()) media="{{ $media }}" @endif
                     srcset="{{ $srcSet }}"
-                    @if($includePlaceholder ?? false) sizes="1px" @endif
+                    @if($includePlaceholder) sizes="1px" @endif
                 >
             @endif
         @endforeach

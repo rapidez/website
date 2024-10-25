@@ -1,23 +1,23 @@
 <div class="relative z-20 mt-0 sm:-mt-16">
     <div class="mx-auto mb-10 max-w-7xl px-4 py-12 text-center">
-        @if ($logo ?? false)
+        @if ($logo)
             <div class="mb-10 flex items-center justify-center">
                 @responsive($logo, ['class' => 'w-16', 'loading' => 'lazy'])
             </div>
         @endif
-        @if (($title_heading ?? false) || ($title_subheading ?? false))
+        @if (($title_heading) || ($title_subheading))
             <h2 class="text-3xl font-extrabold tracking-tight sm:text-5xl">
-                @if ($title_heading ?? false)
+                @if ($title_heading)
                     <span class="block bg-gradient-to-b from-primary-100 to-primary-200 bg-clip-text pb-1 text-transparent">{{ $title_heading }}</span>
                 @endif
-                @if ($title_subheading ?? false)
+                @if ($title_subheading)
                     <span class="block bg-gradient-to-b from-primary-100 to-primary-200 bg-clip-text pb-2 text-transparent">
                         {{ $title_subheading }}
                     </span>
                 @endif
             </h2>
         @endif
-        @if (($buttons ?? false) && ($buttons?->value() ?? false))
+        @if (($buttons) && ($buttons?->value()))
             <div class="mt-8 flex max-sm:flex-col items-center justify-center sm:flex-wrap">
                 @if (isset($buttons->value()[0]))
                     <div class="inline-flex rounded-full">

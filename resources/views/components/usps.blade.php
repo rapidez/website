@@ -1,4 +1,4 @@
-@if ($updatedUsps ?? false)
+@if ($updatedUsps)
     <div class="mt-16 flex flex-col gap-4 border-t pt-16">
         @foreach ($updatedUsps ?? [] as $usp)
             <x-tag

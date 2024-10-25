@@ -41,7 +41,7 @@
             <div class="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black/5">
                 <div class="px-4 pb-6 pt-4">
                     <div class="-mt-px flex items-center justify-between sm:mt-px">
-                        @if($brand->logo ?? false)
+                        @if($brand->logo)
                             <div>
                                 @responsive($brand->logo, ['class' => 'mx-auto h-12'])
                             </div>
@@ -61,7 +61,7 @@
                         <nav class="grid gap-y-2">
                             @foreach ($menuItems as $item)
                                 <a href="{{ $item['url'] }}" target="{{ isset($item['open_in_new_tab']) && $item['open_in_new_tab'] ? '_blank' : '_self' }}" class="flex items-center rounded-md bg-gray-100 p-3 hover:bg-gray-50">
-                                    @if(isset($item['icon']) && $item['icon']?->raw() ?? false)
+                                    @if(isset($item['icon']) && $item['icon']?->raw())
                                         <x-icon :name="'heroicon-' . $item['icon']->raw()" class="h-6 w-6 text-secondary-100" />
                                     @endif
                                     <span class="ml-3 text-base font-medium text-gray-900">
