@@ -1,4 +1,4 @@
-<div class="relative flex flex-col mb-12 sm:mb-32"{{ ($component_id ?? false) ? " id=" . $component_id : "" }}>
+<div class="relative flex flex-col mb-12 sm:mb-32" :id="$component_id ?? false">
     <div class="max-w-7xl mx-auto px-6 sm:px-6 w-full z-10 relative">
         @if(($title_heading ?? false) || ($title_subheading ?? false))
             <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-center mb-0 sm:mt-0 mt-10">

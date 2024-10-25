@@ -1,3 +1,3 @@
-<div class="bg-gray-100 mb-[-2px]">
-    <img src="/img/rapidez-smoke.svg" class="w-full block">
+<div class="mb-[-2px] bg-gray-100">
+    <img src="/img/rapidez-smoke.svg" class="block w-full">
 </div>
