@@ -1,16 +1,16 @@
 <picture>
-    @foreach (($breakpoints ?? []) as $breakpoint)
-        @foreach($breakpoint->sources() ?? [] as $source)
+    @foreach ($breakpoints ?? [] as $breakpoint)
+        @foreach ($breakpoint->sources() ?? [] as $source)
             @php
                 $srcSet = $source->getSrcset();
             @endphp
 
-            @if($srcSet !== null)
+            @if ($srcSet !== null)
                 <source
-                    @if($type = $source->getMimeType()) type="{{ $type }}" @endif
-                    @if($media = $source->getMediaString()) media="{{ $media }}" @endif
+                    @if ($type = $source->getMimeType()) type="{{ $type }}" @endif
+                    @if ($media = $source->getMediaString()) media="{{ $media }}" @endif
                     srcset="{{ $srcSet }}"
-                    @if($includePlaceholder ?? false) sizes="1px" @endif
+                    @if ($includePlaceholder) sizes="1px" @endif
                 >
             @endif
         @endforeach
@@ -25,8 +25,6 @@
         @endunless
         @isset($width) width="{{ $width }}" @endisset
         @isset($height) height="{{ $height }}" @endisset
-        @if($hasSources)
-        onload="this.onload=null; window.responsiveResizeObserver.observe(this);"
-        @endif
+        @if ($hasSources) onload="this.onload=null; window.responsiveResizeObserver.observe(this);" @endif
     >
 </picture>

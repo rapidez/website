@@ -1,0 +1,77 @@
+title: "Logo's"
+fields:
+  -
+    import: component_settings
+  -
+    handle: title_heading
+    field: title.title
+    config:
+      display: 'Title - heading'
+      width: 100
+  -
+    handle: subtitle
+    field: title.title
+    config:
+      display: Subtitle
+      width: 100
+  -
+    handle: logos
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        extra_logo:
+          display: 'Extra logo'
+          instructions: null
+          icon: null
+          sets:
+            logo:
+              display: Logo
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: link
+                  field:
+                    type: link
+                    display: Link
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: open_in_new_tab
+                  field:
+                    default: false
+                    type: toggle
+                    display: 'Open in new tab'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: logo
+                  field: image.image
+                  config:
+                    display: Logo
+                -
+                  handle: display_larger
+                  field:
+                    default: false
+                    type: toggle
+                    display: 'Display larger'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+      type: replicator
+      display: "Logo's"
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

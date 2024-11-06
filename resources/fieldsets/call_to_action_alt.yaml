@@ -1,0 +1,11 @@
+title: 'Call to action alternative'
+fields:
+  -
+    handle: title
+    field: title.title
+  -
+    handle: text
+    field: text.text
+  -
+    import: button
+    prefix: button_

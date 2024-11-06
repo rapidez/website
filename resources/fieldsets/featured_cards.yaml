@@ -1,0 +1,42 @@
+title: 'Featured cards'
+fields:
+  -
+    handle: title_heading
+    field: title.title
+  -
+    handle: title_subheading
+    field: title.title
+  -
+    handle: cards
+    field:
+      collapse: false
+      previews: true
+      max_sets: 2
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            card:
+              display: Card
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: title
+                  field: title.title
+                -
+                  handle: text
+                  field: text.text
+                -
+                  handle: image
+                  field: image.image
+      type: replicator
+      display: Cards
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

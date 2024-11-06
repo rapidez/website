@@ -1,0 +1,137 @@
+title: Partners
+fields:
+  -
+    import: component_settings
+  -
+    handle: title_heading
+    field: title.title
+    config:
+      display: Title
+      width: 100
+  -
+    handle: text
+    field: text.text
+  -
+    handle: columns
+    field:
+      collapse: true
+      previews: true
+      fullscreen: true
+      sets:
+        extra_column:
+          display: 'Extra column'
+          instructions: null
+          icon: null
+          sets:
+            new_set:
+              display: Column
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: title
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Title
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: cards
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      extra_card:
+                        display: 'Extra card'
+                        instructions: null
+                        icon: null
+                        sets:
+                          card:
+                            display: Card
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                handle: logo_type
+                                field:
+                                  options:
+                                    icon: Icon
+                                    image: Image
+                                  taggable: false
+                                  push_tags: false
+                                  multiple: false
+                                  max_items: 1
+                                  clearable: false
+                                  searchable: true
+                                  cast_booleans: false
+                                  default: icon
+                                  type: select
+                                  display: 'Logo type'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  width: 50
+                              -
+                                handle: logo
+                                field: image.image
+                                config:
+                                  display: Logo
+                                  width: 50
+                              -
+                                handle: icon
+                                field:
+                                  directory: resources/svg
+                                  type: icon
+                                  display: Icon
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  if:
+                                    logo_type: 'equals icon'
+                                  width: 50
+                              -
+                                handle: link
+                                field:
+                                  type: link
+                                  display: Link
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                                  width: 50
+                              -
+                                handle: open_in_new_tab
+                                field:
+                                  default: false
+                                  type: toggle
+                                  display: 'Open in new tab'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                    type: replicator
+                    display: Cards
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+      type: replicator
+      display: Columns
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

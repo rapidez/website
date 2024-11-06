@@ -1,0 +1,178 @@
+title: 'Image text'
+fields:
+  -
+    import: component_settings
+  -
+    handle: variant
+    field:
+      options:
+        text_left: 'Text left'
+        text_right: 'Text right'
+      taggable: false
+      push_tags: false
+      multiple: false
+      max_items: 1
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      default: text_left
+      type: select
+      display: Variant
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: background_icon
+    field:
+      options:
+        angry-face: 'Angry face'
+        rocket: Rocket
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: true
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: 'Background icon'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      max_items: 1
+      width: 33
+  -
+    handle: media
+    field: image.image
+    config:
+      display: Media
+      width: 66
+  -
+    handle: content
+    field:
+      collapse: true
+      previews: true
+      fullscreen: true
+      sets:
+        add_set:
+          display: 'Add set'
+          instructions: null
+          icon: null
+          sets:
+            title:
+              display: Title
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: title
+                  field: title.title
+            subtitle:
+              display: Subtitle
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: subtitle
+                  field: title.title
+            text:
+              display: Text
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: text
+                  field: text.text
+            button:
+              display: Button
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: button
+                  prefix: button_
+            usps:
+              display: "USP's"
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: usps
+                  field:
+                    collapse: false
+                    previews: true
+                    fullscreen: true
+                    sets:
+                      extra_usp:
+                        display: 'Extra USP'
+                        instructions: null
+                        icon: null
+                        sets:
+                          usp:
+                            display: USP
+                            instructions: null
+                            icon: null
+                            fields:
+                              -
+                                handle: usp_heading
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: 'USP - Heading'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: usp_text
+                                field:
+                                  input_type: text
+                                  antlers: false
+                                  type: text
+                                  display: 'USP - Text'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: usp_link
+                                field:
+                                  type: link
+                                  display: 'USP - Link'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                              -
+                                handle: usp_open_in_new_tab
+                                field:
+                                  default: false
+                                  type: toggle
+                                  display: 'USP - Link - Open in new tab'
+                                  listable: hidden
+                                  instructions_position: above
+                                  visibility: visible
+                                  replicator_preview: true
+                                  hide_display: false
+                    type: replicator
+                    display: "USP's"
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    instructions: "use the {repos} placeholder to get the count of repo's we have"
+      type: replicator
+      display: Content
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

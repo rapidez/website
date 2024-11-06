@@ -3,7 +3,7 @@
     <a class="group relative flex-1" href="{{ $url }}" target="_blank">
         <div class="relative flex p-7">
             <img src="/img/stripes.png" alt="" class="absolute inset-0 translate-y-4 transition duration-500 group-hover:-rotate-6" />
-            @if($image ?? false)
+            @if($image)
                 @responsive($image, ['class' => 'relative flex-1 translate-y-4 object-contain transition duration-300 group-hover:translate-y-0', 'loading' => 'lazy'])
             @endif
         </div>

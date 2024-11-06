@@ -1,27 +1,24 @@
-<div class="relative flex flex-col mb-12 sm:mb-32"{{ ($component_id ?? false) ? " id=" . $component_id : "" }}>
-    <div class="max-w-7xl mx-auto px-6 sm:px-6 w-full z-10 relative">
-        @if(($title_heading ?? false) || ($title_subheading ?? false))
-            <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-center mb-0 sm:mt-0 mt-10">
-                @if($title_heading ?? false)
-                    <span class="bg-clip-text text-secondary-100 pb-1">{{ $title_heading }}</span>
-                @endif
-                @if($title_subheading ?? false)
-                    <span class="bg-clip-text text-transparent bg-gradient-to-b from-primary-100 to-primary-200 pb-2">
-                        {{ $title_subheading }}
-                    </span>
-                @endif
-            </h2>
+<div id="{{ $component_id }}" class="component relative flex flex-col">
+    <div class="relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-6">
+        @if ($title_heading)
+            <div class="text-center text-3xl font-extrabold tracking-tight text-heading prose-strong:text-secondary-100 sm:text-4xl">
+                {!! $title_heading !!}
+            </div>
         @endif
-        @if($subtitle ?? false)
-            <div class="text-primary-100 text-center mt-5">{!! $subtitle !!}</div>
+        @if ($subtitle)
+            <div class="mt-5 text-center text-primary-100">{!! $subtitle !!}</div>
         @endif
-        <div class="flex flex-wrap mt-6 lg:mt-14 sm:text-lg -mx-1 sm:-mx-6 text-gray-400 justify-center">
-            @foreach($logos as $logo)
-                @if(($logo->link ?? false) || ($logo->logo ?? false))
-                    @php($logoClass = ($logo->display_larger ?? false) ? 'h-10 sm:h-12' : 'h-10')
-                    <div class="flex p-1 sm:p-6 w-full sm:w-1/3">
-                        <a href="{{ $logo->link ?? '' }}" target="{{ $logo->open_in_new_tab ? '_blank' : '_self' }}" class="bg-gray-100 flex flex-1 p-3 sm:p-6 items-center justify-center rounded-full border-2 border-transparent hover:border-secondary-100 transition ease-in-out">
-                            @if($logo->logo ?? false)
+        <div class="-mx-1 mt-6 flex flex-wrap justify-center text-gray-400 sm:-mx-6 sm:text-lg lg:mt-14">
+            @foreach ($logos as $logo)
+                @if ($logo->link || $logo->logo)
+                    @php($logoClass = $logo->display_larger ? 'h-10 sm:h-12' : 'h-10')
+                    <div class="flex w-full p-1 sm:w-1/3 sm:p-6">
+                        <a
+                            href="{{ $logo->link ?? '' }}"
+                            target="{{ $logo->open_in_new_tab ? '_blank' : '_self' }}"
+                            class="flex flex-1 items-center justify-center rounded-full border-2 border-transparent bg-gray-100 p-3 transition ease-in-out hover:border-secondary-100 sm:p-6"
+                        >
+                            @if ($logo->logo)
                                 @responsive($logo->logo, ['class' => $logoClass, 'loading' => 'lazy'])
                             @endif
                         </a>

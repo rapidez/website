@@ -1,0 +1,39 @@
+title: FAQ
+fields:
+  -
+    import: component_settings
+  -
+    handle: title_heading
+    field: title.title
+    config:
+      width: 100
+  -
+    handle: columns
+    field:
+      collapse: true
+      previews: true
+      fullscreen: true
+      sets:
+        extra_column:
+          display: 'Extra column'
+          instructions: null
+          icon: null
+          sets:
+            new_set:
+              display: Column
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: title
+                  field: title.title
+                -
+                  handle: text
+                  field: text.text
+      type: replicator
+      display: Columns
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

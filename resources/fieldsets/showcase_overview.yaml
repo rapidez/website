@@ -1,0 +1,10 @@
+title: 'Showcase overview'
+fields:
+  -
+    handle: title_heading
+    field: title.title
+  -
+    handle: title_subheading
+    field: title.title
+    config:
+      display: Subtitle
