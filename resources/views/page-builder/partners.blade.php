@@ -14,7 +14,9 @@
             @foreach ($columns as $column)
                 <x-package.group :checked="$loop->first">
                     @if ($column->title)
-                        <x-slot name="label" class="{{ $loop->first ? 'rounded-l-lg' : ($loop->last ? 'rounded-r-lg' : '') }}">{{ $column->title }}</x-slot>
+                        <x-slot name="label" class="first-of-type:rounded-l-lg last-of-type:rounded-r-lg">
+                            {{ $column->title }}
+                        </x-slot>
                     @endif
                     @if ($column->cards)
                         <div class="grid gap-x-5 gap-y-6 md:grid-cols-center-3">

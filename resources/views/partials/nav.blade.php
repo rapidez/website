@@ -37,7 +37,7 @@
                     aria-expanded="false"
                 >
                     <span class="sr-only">Open menu</span>
-                    <x-icon name="heroicon-o-menu" class="h-6 w-6" />
+                    <x-icon name="heroicon-o-menu" class="size-6" />
                 </button>
             </div>
         </div>
@@ -61,7 +61,7 @@
                                 @click="mobile_menu=!mobile_menu"
                             >
                                 <span class="sr-only">Close menu</span>
-                                <x-icon name="heroicon-o-x" class="h-6 w-6" />
+                                <x-icon name="heroicon-o-x" class="size-6" />
                             </button>
                         </div>
                     </div>
@@ -74,7 +74,7 @@
                                     class="flex items-center rounded-md bg-gray-100 p-3 hover:bg-gray-50"
                                 >
                                     @if (isset($item['icon']) && $item['icon']?->raw())
-                                        <x-icon :name="'heroicon-' . $item['icon']->raw()" class="h-6 w-6 text-secondary-100" />
+                                        <x-icon :name="'heroicon-' . $item['icon']->raw()" class="size-6 text-secondary-100" />
                                     @endif
                                     <span class="ml-3 text-base font-medium text-gray-900">
                                         {{ $item['title'] }}

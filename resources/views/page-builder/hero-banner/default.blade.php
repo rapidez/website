@@ -28,7 +28,7 @@
                             href="{{ $brand->social_twitter_url }}"
                             target="_blank"
                         >
-                            <x-icon-twitter class="h-10 w-10" />
+                            <x-icon-twitter class="size-10" />
                         </a>
                     @endif
                     @if ($brand->social_github_url)
@@ -37,12 +37,12 @@
                             href="{{ $brand->social_github_url }}"
                             target="_blank"
                         >
-                            <x-icon-github class="h-8 w-8" />
+                            <x-icon-github class="size-8" />
                         </a>
                     @endif
                     @if ($brand->slack_page)
                         <a class="block" href="{{ $brand->slack_page }}">
-                            <x-icon-slack class="h-8 w-8" />
+                            <x-icon-slack class="size-8" />
                         </a>
                     @endif
                 </div>
