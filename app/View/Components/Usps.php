@@ -4,23 +4,27 @@ namespace App\View\Components;
 
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 use Illuminate\View\Component;
 
 class Usps extends Component
 {
     public $usps;
-    public $githubRepoCount;
 
-    public function __construct($usps, $githubRepoCount = null)
+    public function __construct($usps)
     {
-        $this->usps = $usps;
-        $this->githubRepoCount = $githubRepoCount;
+        $this->usps = $usps->raw();
+
+        foreach ($this->usps as &$usp) {
+            if (Str::contains($usp['usp_heading'], '{repos}')) {
+                $usp['usp_heading'] = $this->getRepoCount();
+            }
+        }
     }
 
     public function getRepoCount()
     {
-        $cacheKey = 'usps.github_repo_count';
-        return Cache::remember($cacheKey, now()->addDay(), function () {
+        return Cache::remember('github_repo_count', now()->addDay(), function () {
             $response = Http::get('https://api.github.com/orgs/rapidez/repos?per_page=1');
 
             if (!$response->successful()) {
@@ -31,36 +35,12 @@ class Usps extends Component
                 return (int) $matches[1];
             }
 
-            return 1;
+            return 57;
         });
-    }
-
-    private function prepareUsps()
-    {
-        $updatedUsps = [];
-
-        foreach ($this->usps as $usp) {
-            $uspHeading = $usp->usp_heading ?? '';
-
-            if (strpos($uspHeading, '{repos}') !== false) {
-                if (!$this->githubRepoCount) {
-                    $this->githubRepoCount = $this->getRepoCount();
-                }
-                $uspHeading = str_replace('{repos}', (string) $this->githubRepoCount, $uspHeading);
-            }
-            $updatedUsps[] = [
-                'usp_heading' => $uspHeading,
-                'usp_text' => $usp->usp_text ?? '',
-                'usp_link' => $usp->usp_link ?? '',
-                'usp_open_in_new_tab' => $usp->usp_open_in_new_tab ?? false,
-            ];
-        }
-
-        return $updatedUsps;
     }
 
     public function render()
     {
-        return view('components.usps', ['updatedUsps' => $this->prepareUsps()]);
+        return view('components.usps');
     }
 }
