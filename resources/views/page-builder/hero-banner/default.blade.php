@@ -43,7 +43,11 @@
                         </a>
                     @endif
                     @if ($brand->slack_page)
-                        <a class="block" href="{{ $brand->slack_page }}" title="Slack">
+                        <a
+                            class="block"
+                            href="{{ $brand->slack_page }}"
+                            title="Slack"
+                        >
                             <x-icon-slack class="size-8" />
                         </a>
                     @endif
