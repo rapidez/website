@@ -17,6 +17,7 @@
                             href="{{ $logo->link ?? '' }}"
                             target="{{ $logo->open_in_new_tab ? '_blank' : '_self' }}"
                             class="flex flex-1 items-center justify-center rounded-full border-2 border-transparent bg-gray-100 p-3 transition ease-in-out hover:border-secondary-100 sm:p-6"
+                            title="{{ $logo->link ?? '' }}"
                         >
                             @if ($logo->logo)
                                 @responsive($logo->logo, ['class' => $logoClass, 'loading' => 'lazy'])
