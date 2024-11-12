@@ -25,6 +25,7 @@
                                     href="{{ $card->link ?? '#' }}"
                                     target="{{ $card->open_in_new_tab ? '_blank' : '_self' }}"
                                     logo="{{ $card->raw('icon') ?? '' }}"
+                                    title="{{ $card->link ?? '' }}"
                                 >
                                     @responsive($card->logo, ['class' => 'max-h-7 w-auto mx-auto', 'loading' => 'lazy'])
                                 </x-package.card>
