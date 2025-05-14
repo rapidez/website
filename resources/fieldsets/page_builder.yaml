@@ -104,6 +104,13 @@ fields:
               fields:
                 -
                   import: call_to_action_alt
+            blog_quicklook:
+              display: 'Blog quick look'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: blog_quicklook
       type: replicator
       display: 'Page builder'
       icon: replicator

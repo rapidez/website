@@ -1,0 +1,16 @@
+title: Blog Quick Look
+fields:
+  -
+    import: component_settings
+  -
+    handle: title_subheading
+    field: title.title
+    config:
+      display: Subtitle
+      width: 100
+  -
+    handle: title_heading
+    field: title.title
+    config:
+      display: Title
+      width: 100
