@@ -16,7 +16,6 @@ tabs:
               show_set_alt: true
               type: assets
               display: Logo
-              icon: assets
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -32,12 +31,12 @@ tabs:
               antlers: false
               type: text
               display: 'Twitter URL'
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
+              width: 33
           -
             handle: social_github_url
             field:
@@ -45,12 +44,25 @@ tabs:
               antlers: false
               type: text
               display: 'Github URL'
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
+              width: 33
+          -
+            handle: social_linkedin_url
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'LinkedIn URL'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              width: 33
           -
             handle: slack_page
             field:
@@ -58,7 +70,6 @@ tabs:
                 - pages
               type: link
               display: 'Slack page'
-              icon: link
               listable: hidden
               instructions_position: above
               visibility: visible
