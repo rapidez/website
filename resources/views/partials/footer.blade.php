@@ -16,17 +16,17 @@
         </nav>
         <div class="mt-8 flex flex-wrap items-center justify-center gap-x-7 text-primary-200 *:block *:opacity-50 *:transition hover:*:opacity-100">
             @if ($brand->social_twitter_url)
-                <a href="https://twitter.com/rapidez_io" title="Twitter">
+                <a href="{{ $brand->social_twitter_url }}" title="Twitter">
                     <x-icon-twitter class="size-10" />
                 </a>
             @endif
             @if ($brand->social_github_url)
-                <a href="https://github.com/rapidez/rapidez" title="GitHub">
+                <a href="{{ $brand->social_github_url }}" title="GitHub">
                     <x-icon-github class="size-10" />
                 </a>
             @endif
             @if ($brand->social_linkedin_url)
-                <a href="https://www.linkedin.com/company/rapidez-io/" title="LinkedIn">
+                <a href="{{ $brand->social_linkedin_url }}" title="LinkedIn">
                     <x-icon-linkedin class="size-10" />
                 </a>
             @endif
