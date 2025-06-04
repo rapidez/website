@@ -29,7 +29,7 @@
                             target="_blank"
                             title="Twitter"
                         >
-                            <x-icon-twitter class="size-10" />
+                            <x-icon-twitter class="size-8" />
                         </a>
                     @endif
                     @if ($brand->social_github_url)
@@ -40,6 +40,16 @@
                             title="GitHub"
                         >
                             <x-icon-github class="size-8" />
+                        </a>
+                    @endif
+                    @if ($brand->social_linkedin_url)
+                        <a
+                            class="block"
+                            href="{{ $brand->social_linkedin_url }}"
+                            target="_blank"
+                            title="LinkedIn"
+                        >
+                            <x-icon-linkedin class="size-8" />
                         </a>
                     @endif
                     @if ($brand->slack_page)

@@ -14,30 +14,28 @@
                 </div>
             @endforeach
         </nav>
-        <div class="mt-8 flex flex-wrap items-center justify-center">
-            <a
-                class="mr-7 block text-primary-200 opacity-50 transition duration-100 ease-in-out hover:opacity-100"
-                href="https://twitter.com/rapidez_io"
-                title="Twitter"
-            >
-                <x-icon-twitter class="h-10 w-10" />
-            </a>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-x-7 text-primary-200 *:block *:opacity-50 *:transition hover:*:opacity-100">
+            @if ($brand->social_twitter_url)
+                <a href="{{ $brand->social_twitter_url }}" title="Twitter">
+                    <x-icon-twitter class="size-10" />
+                </a>
+            @endif
+            @if ($brand->social_github_url)
+                <a href="{{ $brand->social_github_url }}" title="GitHub">
+                    <x-icon-github class="size-10" />
+                </a>
+            @endif
+            @if ($brand->social_linkedin_url)
+                <a href="{{ $brand->social_linkedin_url }}" title="LinkedIn">
+                    <x-icon-linkedin class="size-10" />
+                </a>
+            @endif
 
-            <a
-                class="mr-7 block text-primary-200 opacity-50 transition duration-100 ease-in-out hover:opacity-100"
-                href="https://github.com/rapidez/rapidez"
-                title="GitHub"
-            >
-                <x-icon-github class="h-8 w-8" />
-            </a>
-
-            <a
-                class="block text-primary-200 opacity-50 transition duration-100 ease-in-out hover:opacity-100"
-                href="/slack"
-                title="Slack"
-            >
-                <x-icon-slack class="h-8 w-8" />
-            </a>
+            @if ($brand->slack_page)
+                <a href="/slack" title="Slack">
+                    <x-icon-slack class="size-10" />
+                </a>
+            @endif
         </div>
     </div>
 </footer>
