@@ -3,12 +3,12 @@
     <div class="absolute inset-0 h-full w-full bg-gradient-to-br from-secondary-900 from-30% to-secondary-100"></div>
     <div class="relative z-10 mx-auto flex max-w-7xl items-center justify-center px-6 pb-10 lg:py-20">
         @if ($heading || $subheading)
-            <h1 class="mt-4 text-center text-4xl font-extrabold tracking-tighter text-white lg:mt-6 lg:text-6xl lg:leading-none">
+            <h1 class="mt-4 text-center font-extrabold tracking-tighter text-white lg:mt-6 lg:leading-none">
                 @if ($heading)
-                    <span class="block text-white/50">{!! $heading !!}</span>
+                    <span class="block text-white/50 text-2xl lg:text-4xl">{!! $heading !!}</span>
                 @endif
                 @if ($subheading)
-                    <span class="pb-2 text-white lg:block">
+                    <span class="pb-2 text-white lg:block text-4xl lg:text-6xl">
                         {!! $subheading !!}
                     </span>
                 @endif
