@@ -16,7 +16,7 @@
             @if (count($blogs) > 1)
                 <div class="flex flex-col gap-8 lg:w-2/3">
                     @foreach ($blogs->slice(1, 2) as $blog)
-                        <a href="{{ $blog?->url() ?? '' }}" class="flex lg:h-48 lg:[&>*>img]:aspect-square [&>*]:gap-8 lg:[&>*]:flex-row">
+                        <a href="{{ $blog?->url() ?? '' }}" class="flex lg:h-48 lg:[&>*>img]:aspect-square lg:[&>*>img]:max-w-32 [&>*]:gap-8 lg:[&>*]:flex-row">
                             <x-blog
                                 :title="$blog->title"
                                 :image="$blog->overview_image"
