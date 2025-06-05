@@ -12,7 +12,7 @@
             @foreach ($logos as $logo)
                 @if ($logo->link || $logo->logo)
                     @php($logoClass = $logo->display_larger ? 'h-10 sm:h-12' : 'h-10')
-                    <div class="flex w-full p-1 sm:w-1/3 sm:p-6">
+                    <div class="flex w-full p-1 sm:w-1/2 lg:w-1/4 sm:p-6">
                         <a
                             href="{{ $logo->link ?? '' }}"
                             target="{{ $logo->open_in_new_tab ? '_blank' : '_self' }}"
