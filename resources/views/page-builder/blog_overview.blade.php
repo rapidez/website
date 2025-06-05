@@ -4,8 +4,8 @@
     <div class="container relative mx-auto max-w-7xl px-6">
         <div class="flex gap-8 max-lg:flex-col">
             @foreach ($blogs->slice(0, 1) as $blog)
-                <a href="{{ $blog?->url() ?? '' }}" class="flex lg:w-3/5 [&>*>div>h3]:text-3xl lg:[&>*>img]:h-[416px]">
-                    <x-blog :$blog />
+                <a href="{{ $blog?->url() ?? '' }}" class="flex lg:w-3/5">
+                    <x-blog :$blog class="prose-headings:text-3xl" />
                 </a>
             @endforeach
             @if (count($blogs) > 1)
