@@ -16,9 +16,9 @@
         "laravel/tinker": "^2.5",
         "rapidez/blade-directives": "^0.6.0",
         "spatie/laravel-googletagmanager": "^2.6",
-        "spatie/statamic-responsive-images": "^4.1",
-        "statamic/cms": "^4.42",
-        "statamic/eloquent-driver": "^3.0",
+        "spatie/statamic-responsive-images": "^5.2",
+        "statamic/cms": "^5.57",
+        "statamic/eloquent-driver": "^4.25",
         "visuellverstehen/statamic-anchor-navigation": "^1.0"
     },
     "require-dev": {
