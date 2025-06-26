@@ -1,4 +1,4 @@
-@php($blogs = \Statamic\Statamic::tag('collection:blog')->fetch())
+@php($blogs = \Statamic\Statamic::tag('collection:blog')->param('show_in_listing:is', true)->fetch())
 <div class="component blog-overview relative py-16">
     <div class="absolute inset-x-0 bottom-0 h-96 bg-gray-100"></div>
     <div class="container relative mx-auto max-w-7xl px-6">

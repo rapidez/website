@@ -1,4 +1,4 @@
-@php($blogs = \Statamic\Statamic::tag('collection:blog')->params(['limit' => 3])->fetch())
+@php($blogs = \Statamic\Statamic::tag('collection:blog')->param('show_in_listing:is', true)->params(['limit' => 3])->fetch())
 <div id="{{ $component_id }}" class="component mx-auto flex max-w-5xl flex-col items-center px-6 py-16">
     @if ($title_subheading ?? false)
         <span class="text-center text-sm text-secondary-100">{!! $title_subheading !!}</span>
