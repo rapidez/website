@@ -43,7 +43,7 @@
 
                 @if($roadmap_items->is_shipped)
                     @foreach(collect($roadmap_items->items ?? [])->groupBy('shipped_text') as $shippedText => $items)
-                        <div class="flex items-start gap-4 pb-10 max-lg:flex-col lg:gap-12">
+                        <div class="flex items-start gap-4 mb-10 pb-10 border-b border-dashed last:border-none max-lg:flex-col lg:gap-12">
                             <div class="top-2 w-full lg:sticky lg:w-1/4">
                                 @if ($shippedText ?? false)
                                     <div class="text-xl text-heading font-medium">
