@@ -1,0 +1,81 @@
+title: Roadmap
+fields:
+  -
+    import: title
+  -
+    import: text
+  -
+    handle: roadmap
+    field:
+      type: replicator
+      display: Roadmap
+      sets:
+        roadmap:
+          display: Roadmap
+          sets:
+            roadmap:
+              display: Roadmap
+              icon: arrow-roadmap-path-flow
+              fields:
+                -
+                  import: icon
+                -
+                  import: title
+                -
+                  handle: is_shipped
+                  field:
+                    type: toggle
+                    display: 'Is shipped'
+                -
+                  handle: items
+                  field:
+                    type: replicator
+                    display: Items
+                    sets:
+                      roadmap_items:
+                        display: 'Roadmap items'
+                        sets:
+                          roadmap_item:
+                            display: 'Roadmap item'
+                            fields:
+                              -
+                                handle: shipped_text
+                                field:
+                                  type: text
+                                  display: 'Shipped text'
+                              -
+                                handle: title
+                                field:
+                                  type: text
+                                  display: Title
+                              -
+                                import: text
+                              -
+                                handle: link
+                                field:
+                                  type: link
+                                  display: Link
+                              -
+                                handle: links
+                                field:
+                                  type: replicator
+                                  display: Links
+                                  sets:
+                                    links:
+                                      display: Links
+                                      sets:
+                                        link:
+                                          display: Link
+                                          fields:
+                                            -
+                                              handle: link_text
+                                              field:
+                                                type: text
+                                                display: 'Link text'
+                                                width: 50
+                                            -
+                                              handle: link
+                                              field:
+                                                type: link
+                                                display: Link
+                                                width: 50

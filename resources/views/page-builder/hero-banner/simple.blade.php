@@ -3,9 +3,9 @@
     <div class="relative z-10 mx-auto flex max-w-7xl items-center justify-center px-6 pb-10 lg:py-20">
         @if (($heading ?? '') || ($subheading ?? ''))
             <h1 class="mt-4 text-center text-4xl font-extrabold tracking-tighter text-white lg:mt-6 lg:text-6xl lg:leading-none">
-                <span class="block text-white/50">{{ $heading ?? '' }}</span>
+                <span class="block text-white/50">{!! $heading ?? '' !!}</span>
                 <span class="pb-2 text-white lg:block">
-                    {{ $subheading ?? '' }}
+                    {!! $subheading ?? '' !!}
                 </span>
             </h1>
         @endif

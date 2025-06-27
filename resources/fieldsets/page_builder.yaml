@@ -4,118 +4,84 @@ fields:
     handle: page_builder
     field:
       collapse: true
-      previews: true
-      fullscreen: true
+      type: replicator
+      display: 'Page builder'
       sets:
         new_set_group:
           display: 'New Set Group'
-          instructions: null
-          icon: null
           sets:
             hero_banner:
               display: 'Hero banner'
-              instructions: null
-              icon: null
               fields:
                 -
                   import: hero_banner
             logos:
               display: "Logo's"
-              instructions: null
-              icon: null
               fields:
                 -
                   import: logos
             image_text:
               display: 'Image text'
-              instructions: null
-              icon: null
               fields:
                 -
                   import: image_text
             text_columns:
               display: 'Text columns'
-              instructions: null
-              icon: null
               fields:
                 -
                   import: text_columns
             seperator_logo:
               display: 'Seperator logo'
-              instructions: null
-              icon: null
               fields: {  }
             seperator_clouds:
               display: 'Seperator clouds'
-              instructions: null
-              icon: null
               fields: {  }
             faq:
               display: FAQ
-              instructions: null
-              icon: null
               fields:
                 -
                   import: faq
             partners:
               display: Partners
-              instructions: null
-              icon: null
               fields:
                 -
                   import: partners
             call_to_action:
               display: 'Call to action'
-              instructions: null
-              icon: null
               fields:
                 -
                   import: call_to_action
             content:
               display: Text
-              instructions: null
-              icon: null
               fields:
                 -
                   import: text
             blog_overview:
               display: 'Blog overview'
-              instructions: null
-              icon: null
               fields: {  }
             showcase_overview:
               display: 'Showcase overview'
-              instructions: null
-              icon: null
               fields:
                 -
                   import: showcase_overview
             featured_cards:
               display: 'Featured cards'
-              instructions: null
-              icon: null
               fields:
                 -
                   import: featured_cards
             call_to_action_alt:
               display: 'Call to action alternative'
-              instructions: null
-              icon: null
               fields:
                 -
                   import: call_to_action_alt
             blog_quicklook:
               display: 'Blog quick look'
-              instructions: null
-              icon: null
               fields:
                 -
                   import: blog_quicklook
-      type: replicator
-      display: 'Page builder'
-      icon: replicator
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
+            roadmap:
+              display: Roadmap
+              icon: arrow-roadmap-path-flow
+              fields:
+                -
+                  import: roadmap
