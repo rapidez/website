@@ -1,0 +1,8 @@
+title: Icon
+fields:
+  -
+    handle: icon
+    field:
+      directory: resources/svg
+      type: icon
+      display: Icon
