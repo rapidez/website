@@ -2,7 +2,7 @@
 @slots(['title', 'content'])
 
 <div class="bg-white border rounded-lg p-6 shadow-md">
-    @if ($item->title)
+    @if ($title)
         <x-tag
             :is="$item->link->value() ? 'a' : 'div'"
             :href="$item->link->value() ?? null"
@@ -18,7 +18,7 @@
             @endif
         </x-tag>
     @endif
-    @if ($item->text ?? false)
+    @if ($content)
         <div class="flex-1 mt-2 text-inactive text-sm">
             {{ $content }}
         </div>
