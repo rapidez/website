@@ -42,7 +42,7 @@
 </head>
 <body x-data="{solutions_menu:false, mobile_menu:false}" class="min-h-screen flex flex-col flex-1 font-body overflow-x-hidden antialiased">
     @include('googletagmanager::body')
-    <div class="overflow-x-hidden">
+    <div>
         @include('partials.nav')
         @yield('content')
         @include('partials.footer')
