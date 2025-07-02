@@ -3,7 +3,7 @@
     @if ($blog->overview_image)
         @responsive($blog->overview_image, ['class' => 'rounded-lg object-cover ' . $imageClass, 'loading' => 'lazy'])
     @endif
-    <div class="flex flex-col self-center flex-1">
+    <div class="flex flex-col flex-1">
         @if ($blog->blog_category->title)
             <span class="text-sm text-secondary-100">{{ $blog->blog_category->title }} - {{ $blog->date->format('Y-m-d') }}</span>
         @endif

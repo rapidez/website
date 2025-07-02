@@ -5,7 +5,11 @@
         <div class="flex gap-8 max-lg:flex-col">
             @foreach ($blogs->slice(0, 1) as $blog)
                 <a href="{{ $blog?->url() ?? '' }}" class="flex lg:w-3/5">
-                    <x-blog :$blog class="prose-headings:text-3xl" />
+                    <x-blog
+                        :$blog
+                        image-class="flex-1"
+                        class="w-full prose-headings:text-3xl *:flex *:flex-1"
+                    />
                 </a>
             @endforeach
             @if (count($blogs) > 1)
