@@ -1,0 +1,38 @@
+title: 'Roadmap item'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    import: text
+  -
+    handle: link
+    field:
+      type: link
+      display: Link
+  -
+    handle: links
+    field:
+      type: replicator
+      display: Links
+      sets:
+        links:
+          display: Links
+          sets:
+            link:
+              display: Link
+              fields:
+                -
+                  handle: link_text
+                  field:
+                    type: text
+                    display: 'Link text'
+                    width: 50
+                -
+                  handle: link
+                  field:
+                    type: link
+                    display: Link
+                    width: 50
