@@ -25,12 +25,12 @@ class Roadmap extends Tags
                 ->where('parent_term', $term->slug())
                 ->orderBy('custom_sort_order', 'asc')
                 ->get();
+
             if($childTerms->isEmpty()) {
                 return $roadmapItem;
             }
 
-            $children = $childTerms->map(fn($childTerm) => $this->getTermData($childTerm, $term));
-            $roadmapItem['children'] = $children;
+            $roadmapItem['children'] = $childTerms->map(fn($childTerm) => $this->getTermData($childTerm, $term));
 
             return $roadmapItem;
         });
