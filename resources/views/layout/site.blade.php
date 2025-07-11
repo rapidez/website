@@ -39,6 +39,7 @@
             });
         });
     </script>
+    {!! Statamic::tag('structured-data:head')->fetch() !!}
 </head>
 <body x-data="{solutions_menu:false, mobile_menu:false}" class="min-h-screen flex flex-col flex-1 font-body overflow-x-hidden antialiased">
     @include('googletagmanager::body')
