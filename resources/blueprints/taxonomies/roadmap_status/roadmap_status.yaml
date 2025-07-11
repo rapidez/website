@@ -1,0 +1,50 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            import: icon
+          -
+            handle: is_shipped
+            field:
+              type: toggle
+              display: 'Is shipped'
+          -
+            handle: custom_sort_order
+            field:
+              input_type: number
+              default: '10'
+              type: text
+              display: 'Sort order'
+              instructions: 'The lowest number will be shown first.'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              required: true
+              validate:
+                - required
+                - 'max:200'
+          -
+            handle: parent_term
+            field:
+              max_items: 1
+              taxonomies:
+                - roadmap_status
+              type: terms
+              display: 'Parent Term'
+title: 'Roadmap status'
