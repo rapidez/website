@@ -1,0 +1,32 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            import: roadmap_item
+            config:
+              title:
+                required: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: roadmap_status
+            field:
+              max_items: 1
+              mode: select
+              taxonomies:
+                - roadmap_status
+              type: terms
+              display: 'Roadmap status'
+title: Roadmap
