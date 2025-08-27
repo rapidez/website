@@ -1,0 +1,17 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: icon
+            field:
+              directory: vendor/blade-ui-kit/blade-heroicons/resources/svg
+              type: icon
+              display: Icon
+          -
+            handle: open_in_new_tab
+            field:
+              type: toggle
+              display: 'Open in new tab'

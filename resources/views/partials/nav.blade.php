@@ -1,4 +1,4 @@
-@php($menuItems = \Statamic\Statamic::tag('nav:main_navigation')->fetch())
+@php($menuItems = \Statamic\Statamic::tag('nav:header_navigation')->fetch())
 <div class="relative z-20">
     <div class="relative mx-auto max-w-7xl px-6">
         <div class="flex items-center justify-between py-6 lg:justify-start lg:space-x-10">
