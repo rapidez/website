@@ -1,4 +1,4 @@
-@php($menuItems = \Statamic\Statamic::tag('nav:main_navigation')->fetch())
+@php($menuItems = \Statamic\Statamic::tag('nav:footer_navigation')->fetch())
 <footer class="border-t border-gray-200 bg-white">
     <div class="mx-auto mb-6 max-w-7xl overflow-hidden px-4 py-12 sm:px-6 lg:px-8">
         <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
