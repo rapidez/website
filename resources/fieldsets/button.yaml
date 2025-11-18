@@ -1,35 +1,23 @@
 title: Button
 fields:
   -
+    handle: icon
+    field:
+      type: icon
+      display: Icoon
+      directory: resources/svg
+  -
     handle: text
     field:
-      input_type: text
-      antlers: false
       type: text
       display: Text
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
   -
     handle: link
     field:
       type: link
       display: Link
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
   -
     handle: open_in_new_tab
     field:
-      default: false
       type: toggle
       display: 'Open in new tab'
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false

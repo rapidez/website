@@ -9,43 +9,21 @@ fields:
     handle: logo
     field:
       max_files: 1
-      mode: list
       container: assets
-      restrict: false
-      allow_uploads: true
-      show_filename: true
-      show_set_alt: true
       type: assets
       display: Logo
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
   -
     handle: buttons
     field:
-      collapse: false
-      previews: true
-      max_sets: 2
-      fullscreen: true
+      max_sets: 3
+      type: replicator
+      display: Buttons
       sets:
         extra_button:
           display: 'Extra button'
-          instructions: null
-          icon: null
           sets:
             button:
               display: Button
-              instructions: null
-              icon: null
               fields:
                 -
                   import: button
-      type: replicator
-      display: Buttons
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
