@@ -27,3 +27,5 @@ fields:
               fields:
                 -
                   import: button
+                -
+                  import: button_variant

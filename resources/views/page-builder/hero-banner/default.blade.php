@@ -20,33 +20,28 @@
                 @endif
                 <div class="mt-8 flex gap-6 text-white flex-col">
                     <div class="flex gap-4">
-                        @if (isset($buttons->value()[0]))
-                            <div class="inline-flex rounded-full">
-                                <a
-                                    href="{{ $buttons->value()[0]->link ?? '' }}"
-                                    target="{{ $buttons->value()[0]->open_in_new_tab ? '_blank' : '_self' }}"
-                                    class="bg-white h-12 inline-flex gap-x-2.5 items-center justify-center whitespace-nowrap rounded-full border-2 border-button px-6 text-base font-bold text-heading opacity-100 transition duration-150 ease-in-out hover:opacity-80"
-                                >
-                                    @if ($buttons->value()[0]->icon ?? false)
-                                        {!! $buttons->value()[0]->icon !!}
-                                    @endif
-                                    {{ $buttons->value()[0]->text ?? '' }}
-                                </a>
-                            </div>
-                        @endif
-                        @if (isset($buttons->value()[1]))
-                            <div class="inline-flex rounded-full">
-                                <a
-                                    href="{{ $buttons->value()[1]->link ?? '' }}"
-                                    target="{{ $buttons->value()[1]->open_in_new_tab ? '_blank' : '_self' }}"
-                                    class="bg-white h-12 inline-flex gap-x-2.5 items-center justify-center whitespace-nowrap rounded-full border-2 border-secondary-100 px-6 text-base font-bold text-heading opacity-100 transition duration-150 ease-in-out hover:opacity-80"
-                                >
-                                    @if ($buttons->value()[1]->icon ?? false)
-                                        {!! $buttons->value()[1]->icon !!}
-                                    @endif
-                                    {{ $buttons->value()[1]->text ?? '' }}
-                                </a>
-                            </div>
+                        @if ($buttons && $buttons?->value())
+                            @foreach($buttons ?? [] as $button)
+                                <div class="inline-flex rounded-full">
+                                    <a
+                                        href="{{ $button->link->value() ?? '' }}"
+                                        target="{{ $button->open_in_new_tab ? '_blank' : '_self' }}"
+                                        @class([
+                                            'h-12 inline-flex gap-x-2.5 bg-white items-center justify-center whitespace-nowrap rounded-full border-2 px-6 text-base font-bold text-heading opacity-100 transition duration-150 ease-in-out hover:opacity-80',
+                                            'border-button' => $button->button_variant->value() === 'outline-green',
+                                            'border-secondary-100' => $button->button_variant->value() === 'outline-blue',
+                                            'border-gray-200' => $button->button_variant->value() === 'outline-gray',
+                                        ])
+                                    >
+                                        @if ($button->icon ?? false)
+                                            <div class="size-8">
+                                                {!! $button->icon !!}
+                                            </div>
+                                        @endif
+                                        {{ $button->text }}
+                                    </a>
+                                </div>
+                            @endforeach
                         @endif
                     </div>
                     <div class="flex gap-x-4">

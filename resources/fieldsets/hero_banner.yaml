@@ -44,6 +44,8 @@ fields:
               fields:
                 -
                   import: button
+                -
+                  import: button_variant
   -
     handle: youtube_embed_url
     field:

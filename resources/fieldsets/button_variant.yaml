@@ -1,0 +1,18 @@
+title: 'Button variant'
+fields:
+  -
+    handle: button_variant
+    field:
+      options:
+        -
+          key: outline-green
+          value: 'Groene border'
+        -
+          key: outline-blue
+          value: 'Blauwe border'
+        -
+          key: outline-gray
+          value: 'Grijze border'
+      type: select
+      display: 'Button variant'
+      default: outline-green
