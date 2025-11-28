@@ -43,7 +43,7 @@
 </head>
 <body x-data="{solutions_menu:false, mobile_menu:false}" class="min-h-screen flex flex-col flex-1 font-body overflow-x-hidden antialiased">
     @include('googletagmanager::body')
-    <div>
+    <div class="overflow-clip">
         @include('partials.nav')
         @yield('content')
         @include('partials.footer')

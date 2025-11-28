@@ -16,7 +16,8 @@ module.exports = {
                     900: "#002f36",
                 },
                 heading: "#213F60",
-                inactive: "#577C87"
+                inactive: "#577C87",
+                button: "#4285F4"
             },
         },
         dropShadow: {

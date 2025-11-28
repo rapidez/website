@@ -18,49 +18,64 @@
                         {!! $text !!}
                     </div>
                 @endif
-                <div class="mt-8">
-                    @include('partials.newsletter')
-                </div>
-                <div class="mt-8 flex flex-wrap items-center gap-6 text-white">
-                    @if ($brand->social_twitter_url)
-                        <a
-                            class="block"
-                            href="{{ $brand->social_twitter_url }}"
-                            target="_blank"
-                            title="Twitter"
-                        >
-                            <x-icon-twitter class="size-8" />
-                        </a>
-                    @endif
-                    @if ($brand->social_github_url)
-                        <a
-                            class="block"
-                            href="{{ $brand->social_github_url }}"
-                            target="_blank"
-                            title="GitHub"
-                        >
-                            <x-icon-github class="size-8" />
-                        </a>
-                    @endif
-                    @if ($brand->social_linkedin_url)
-                        <a
-                            class="block"
-                            href="{{ $brand->social_linkedin_url }}"
-                            target="_blank"
-                            title="LinkedIn"
-                        >
-                            <x-icon-linkedin class="size-8" />
-                        </a>
-                    @endif
-                    @if ($brand->slack_page)
-                        <a
-                            class="block"
-                            href="{{ $brand->slack_page }}"
-                            title="Slack"
-                        >
-                            <x-icon-slack class="size-8" />
-                        </a>
-                    @endif
+                <div class="mt-8 flex gap-6 text-white flex-col">
+                    <div class="flex gap-4">
+                        @if ($buttons && $buttons?->value())
+                            @foreach($buttons ?? [] as $button)
+                                <div class="inline-flex rounded-full">
+                                    <a
+                                        href="{{ $button->link->value() ?? '' }}"
+                                        target="{{ $button->open_in_new_tab ? '_blank' : '_self' }}"
+                                        @class([
+                                            'h-12 inline-flex gap-x-2.5 bg-white items-center justify-center whitespace-nowrap rounded-full border-2 px-6 text-base font-bold text-heading opacity-100 transition duration-150 ease-in-out hover:opacity-80',
+                                            'border-button' => $button->button_variant->value() === 'outline-green',
+                                            'border-secondary-100' => $button->button_variant->value() === 'outline-blue',
+                                            'border-gray-200' => $button->button_variant->value() === 'outline-gray',
+                                        ])
+                                    >
+                                        @if ($button->icon ?? false)
+                                            <div class="size-8">
+                                                {!! $button->icon !!}
+                                            </div>
+                                        @endif
+                                        {{ $button->text }}
+                                    </a>
+                                </div>
+                            @endforeach
+                        @endif
+                    </div>
+                    <div class="flex gap-x-4">
+                        @if ($brand->social_twitter_url)
+                            <a
+                                class="block"
+                                href="{{ $brand->social_twitter_url }}"
+                                target="_blank"
+                                title="Twitter"
+                            >
+                                <x-icon-twitter class="size-8" />
+                            </a>
+                        @endif
+                        @if ($brand->social_github_url)
+                            <a
+                                class="block"
+                                href="{{ $brand->social_github_url }}"
+                                target="_blank"
+                                title="GitHub"
+                            >
+                                <x-icon-github class="size-8" />
+                            </a>
+                        @endif
+                        @if ($brand->social_linkedin_url)
+                            <a
+                                class="block"
+                                href="{{ $brand->social_linkedin_url }}"
+                                target="_blank"
+                                title="LinkedIn"
+                            >
+                                <x-icon-linkedin class="size-8" />
+                            </a>
+                        @endif
+                    </div>
                 </div>
             </div>
             <div class="mt-1 pt-12 lg:flex lg:items-start lg:justify-start">

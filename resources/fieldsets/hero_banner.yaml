@@ -8,21 +8,10 @@ fields:
       options:
         default: Default
         simple: Simple
-      taggable: false
-      push_tags: false
-      multiple: false
       max_items: 1
-      clearable: false
-      searchable: true
-      cast_booleans: false
       default: default
       type: select
       display: Variant
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
   -
     handle: heading
     field: title.title
@@ -39,16 +28,28 @@ fields:
     handle: text
     field: text.text
   -
+    handle: buttons
+    field:
+      max_sets: 2
+      type: replicator
+      display: Buttons
+      if:
+        variant: 'equals default'
+      sets:
+        buttons:
+          display: Buttons
+          sets:
+            button:
+              display: Button
+              fields:
+                -
+                  import: button
+                -
+                  import: button_variant
+  -
     handle: youtube_embed_url
     field:
-      input_type: text
-      antlers: false
       type: text
       display: 'Youtube embed URL'
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
       if:
         variant: 'equals default'
