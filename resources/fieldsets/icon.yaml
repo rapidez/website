@@ -3,6 +3,6 @@ fields:
   -
     handle: icon
     field:
-      directory: resources/svg
+      set: rapidez
       type: icon
       display: Icon

@@ -37,6 +37,10 @@ return [
             'driver' => 'file',
             'path' => public_path('static'),
             'lock_hold_length' => 0,
+            'permissions' => [
+                'directory' => 0755,
+                'file' => 0644,
+            ],
         ],
 
     ],
@@ -96,6 +100,47 @@ return [
 
     'ignore_query_strings' => false,
 
+    'allowed_query_strings' => [
+        //
+    ],
+
+    'disallowed_query_strings' => [
+        'source',
+        'ad_network',
+        'utm_source',
+        'utm_medium',
+        'utm_campaign',
+        'utm_id',
+        'utm_term',
+        'utm_content',
+        'gad_source',
+        'gad_campaignid',
+        'gclid',
+        '_gl',
+        'gbraid',
+        'amp',
+        '__gads',
+        '__atuv',
+        'mpid',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Nocache
+    |--------------------------------------------------------------------------
+    |
+    | Here you may define where the nocache data is stored.
+    |
+    | https://statamic.dev/tags/nocache#database
+    |
+    | Supported drivers: "cache", "database"
+    |
+    */
+
+    'nocache' => 'cache',
+
+    'nocache_db_connection' => env('STATAMIC_NOCACHE_DB_CONNECTION'),
+
     /*
     |--------------------------------------------------------------------------
     | Replacers
@@ -121,6 +166,41 @@ return [
     |
     */
 
-    'warm_queue' => null,
+    'warm_queue' => env('STATAMIC_STATIC_WARM_QUEUE'),
+
+    'warm_queue_connection' => env('STATAMIC_STATIC_WARM_QUEUE_CONNECTION'),
+
+    'warm_insecure' => env('STATAMIC_STATIC_WARM_INSECURE', false),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Background Re-cache
+    |--------------------------------------------------------------------------
+    |
+    | When this is enabled, Statamic will re-cache URLs in the background,
+    | overwriting the existing cache, without removing it first.
+    |
+    */
+
+    'background_recache' => env('STATAMIC_BACKGROUND_RECACHE', false),
+
+    'recache_token' => env('STATAMIC_RECACHE_TOKEN'),
+
+    'recache_token_parameter' => '__recache',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Shared Error Pages
+    |--------------------------------------------------------------------------
+    |
+    | You may choose to share the same statically generated error page across
+    | all errors. For example, the first time a 404 is encountered it will
+    | be generated and cached, and then served for all subsequent 404s.
+    |
+    | This is only supported for half measure.
+    |
+    */
+
+    'share_errors' => false,
 
 ];
