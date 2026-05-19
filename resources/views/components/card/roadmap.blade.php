@@ -14,7 +14,7 @@
         >
             {{ $title }}
             @if ($item->link->value() ?? false)
-                <x-heroicon-o-paper-clip class="size-5" />
+                <x-icon name="heroicon-o-paper-clip" class="size-5" />
             @endif
         </x-tag>
     @endif

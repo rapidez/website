@@ -3,26 +3,13 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Statamic\Facades\Icon as IconFacade;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
+    public function boot(): void
     {
-        //
-    }
-
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        //
+        IconFacade::register('heroicons', base_path('vendor/blade-ui-kit/blade-heroicons/resources/svg'));
+        IconFacade::register('rapidez', base_path('resources/svg'));
     }
 }

@@ -34,7 +34,7 @@ fields:
                 -
                   handle: icon
                   field:
-                    directory: vendor/blade-ui-kit/blade-heroicons/resources/svg
+                    set: heroicons
                     type: icon
                     display: icon
                     listable: hidden

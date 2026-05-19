@@ -15,7 +15,7 @@
                     <span class="text-inactive">{{ $usp['usp_text'] ?? '' }}</span>
                 </span>
                 @if (isset($usp['usp_link']))
-                    <x-heroicon-o-external-link class="h-4 text-inactive" />
+                    <x-icon name="heroicon-o-arrow-top-right-on-square" class="h-4 text-inactive" />
                 @endif
             </x-tag>
         @endforeach

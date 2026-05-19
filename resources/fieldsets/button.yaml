@@ -5,7 +5,7 @@ fields:
     field:
       type: icon
       display: Icoon
-      directory: resources/svg
+      set: rapidez
   -
     handle: text
     field:

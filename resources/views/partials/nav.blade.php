@@ -37,7 +37,7 @@
                     aria-expanded="false"
                 >
                     <span class="sr-only">Open menu</span>
-                    <x-icon name="heroicon-o-menu" class="size-6" />
+                    <x-icon name="heroicon-o-bars-3" class="size-6" />
                 </button>
             </div>
         </div>
@@ -61,7 +61,7 @@
                                 @click="mobile_menu=!mobile_menu"
                             >
                                 <span class="sr-only">Close menu</span>
-                                <x-icon name="heroicon-o-x" class="size-6" />
+                                <x-icon name="heroicon-o-x-mark" class="size-6" />
                             </button>
                         </div>
                     </div>
