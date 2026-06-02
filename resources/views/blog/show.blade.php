@@ -1,6 +1,6 @@
 @extends('layout.site')
 
-@section('title', $meta_title->raw() ? $meta_title .' - '. config('app.name') : $title . ' - Rapidez')
+@section('title', $meta_title->raw() ? $meta_title : $title . ' - Rapidez')
 @section('meta_description', (isset($meta_description) && !empty($meta_description->raw())) ? $meta_description : config('app.name'))
 
 @section('content')
