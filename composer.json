@@ -6,12 +6,6 @@
         "rapidez"
     ],
     "license": "GPL-3.0-or-later",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/wiegertschouten/statamic-anchor-navigation"
-        }
-    ],
     "require": {
         "php": "^8.4",
         "blade-ui-kit/blade-heroicons": "^2.0",
@@ -26,7 +20,7 @@
         "spatie/statamic-responsive-images": "^6.0",
         "statamic/cms": "^6.0",
         "statamic/eloquent-driver": "^5.0",
-        "visuellverstehen/statamic-anchor-navigation": "dev-feature/statamic-6-support"
+        "visuellverstehen/statamic-anchor-navigation": "^1.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
