@@ -1,0 +1,56 @@
+title: 'Versions table'
+fields:
+  -
+    handle: versions
+    field:
+      collapse: true
+      previews: true
+      fullscreen: true
+      sets:
+        extra_version:
+          display: 'Extra version'
+          instructions: null
+          icon: null
+          sets:
+            version:
+              display: Version
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: version
+                  field:
+                    type: text
+                    display: Version
+                    instructions: 'e.g. v5'
+                    validate:
+                      - required
+                -
+                  handle: released
+                  field:
+                    type: date
+                    display: Released
+                    time_enabled: false
+                    validate:
+                      - required
+                -
+                  handle: active_until
+                  field:
+                    type: date
+                    display: 'Active support until'
+                    instructions: 'Date active support ends. Leave empty if not known yet, e.g. for the current version.'
+                    time_enabled: false
+                -
+                  handle: eol
+                  field:
+                    type: date
+                    display: 'End of life'
+                    instructions: 'Security support end date. Leave empty if not known yet, e.g. for the current version.'
+                    time_enabled: false
+      type: replicator
+      display: Versions
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

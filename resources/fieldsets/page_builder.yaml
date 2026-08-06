@@ -85,3 +85,8 @@ fields:
               fields:
                 -
                   import: roadmap
+            versions_table:
+              display: 'Versions table'
+              fields:
+                -
+                  import: versions_table
