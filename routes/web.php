@@ -19,6 +19,8 @@ use Illuminate\Support\Facades\Validator;
 |
 */
 
+Route::statamic('cloud', 'cloud');
+
 Route::redirect('slack', 'https://join.slack.com/t/rapidez/shared_invite/zt-35gbinhoi-1KcVac_1mYRprZlQPbRJsg');
 
 /*

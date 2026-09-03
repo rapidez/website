@@ -22,6 +22,14 @@ module.exports = {
         },
         dropShadow: {
             "toolbar": "0 4px 40px rgba(0, 0, 0, 0.10)",
+            // Follows the alpha channel, so it hugs the rounded corners of a transparent screenshot.
+            // The first pass has no offset so the halo lands on all four sides, including the top.
+            "mockup": [
+                "0 0 16px rgba(16, 26, 46, 0.22)",
+                "0 0 44px rgba(16, 26, 46, 0.14)",
+                "0 20px 34px rgba(16, 26, 46, 0.12)",
+                "0 40px 70px rgba(16, 26, 46, 0.16)",
+            ],
         },
     },
     plugins: [
