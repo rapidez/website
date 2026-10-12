@@ -1,13 +1,14 @@
 @include('partials.hero-simple', ['heading' => 'Projects made with', 'subheading' => 'Rapidez'])
 <div class="component container mx-auto max-w-7xl px-6">
-    <div class="mt-20 grid gap-28">
+    {{-- The rows carry their own padding for the hover background, so the gaps are smaller to keep the same visual spacing. --}}
+    <div class="mt-12 grid gap-12 lg:mt-10 lg:gap-8">
         @php($showcases = \Statamic\Statamic::tag('collection:showcases')->fetch())
         @foreach ($showcases as $showcase)
             <x-showcase
                 :title="$showcase->title"
                 :subtitle="$showcase->subtitle"
                 :image="$showcase->overview_image"
-                :url="$showcase->link"
+                :url="$showcase->url"
             >
                 {!! $showcase->description !!}
             </x-showcase>

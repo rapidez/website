@@ -1,0 +1,10 @@
+title: 'Showcase slider'
+fields:
+  -
+    import: component_settings
+  -
+    handle: title_heading
+    field: title.title
+    config:
+      display: Title
+      width: 100

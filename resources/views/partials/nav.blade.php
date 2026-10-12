@@ -10,13 +10,40 @@
             </div>
             <nav class="hidden flex-1 justify-center space-x-10 lg:flex">
                 @foreach ($menuItems as $item)
-                    <a
-                        href="{{ $item['url'] }}"
-                        target="{{ isset($item['open_in_new_tab']) && $item['open_in_new_tab'] ? '_blank' : '_self' }}"
-                        class="text-lg text-white transition-all hover:text-opacity-90"
-                    >
-                        {{ $item['title'] }}
-                    </a>
+                    @if (! empty($item['children']))
+                        <div class="relative" @click.away="solutions_menu = false">
+                            <button
+                                type="button"
+                                @click="solutions_menu = !solutions_menu"
+                                class="flex items-center gap-x-1 text-lg text-white transition-all hover:text-opacity-90"
+                            >
+                                {{ $item['title'] }}
+                                <x-icon name="heroicon-o-chevron-down" class="size-4 transition-transform" x-bind:class="{ 'rotate-180': solutions_menu }" />
+                            </button>
+                            <div
+                                x-bind:class="{ 'opacity-100 pointer-events-auto': solutions_menu }"
+                                class="absolute left-1/2 top-full z-20 mt-3 w-56 -translate-x-1/2 rounded-lg bg-white p-2 opacity-0 pointer-events-none shadow-lg ring-1 ring-black/5 transition-all"
+                            >
+                                @foreach ($item['children'] as $child)
+                                    <a
+                                        href="{{ $child['url'] }}"
+                                        target="{{ isset($child['open_in_new_tab']) && $child['open_in_new_tab']?->value() ? '_blank' : '_self' }}"
+                                        class="block rounded-md px-3 py-2 text-base text-gray-700 hover:bg-gray-100"
+                                    >
+                                        {{ $child['title'] }}
+                                    </a>
+                                @endforeach
+                            </div>
+                        </div>
+                    @else
+                        <a
+                            href="{{ $item['url'] }}"
+                            target="{{ isset($item['open_in_new_tab']) && $item['open_in_new_tab']?->value() ? '_blank' : '_self' }}"
+                            class="text-lg text-white transition-all hover:text-opacity-90"
+                        >
+                            {{ $item['title'] }}
+                        </a>
+                    @endif
                 @endforeach
             </nav>
             @if (($header->header_button_text ?? '') && ($header->header_button_link ?? ''))
@@ -68,25 +95,45 @@
                     <div class="mt-6">
                         <nav class="grid gap-y-2">
                             @foreach ($menuItems as $item)
-                                <a
-                                    href="{{ $item['url'] }}"
-                                    target="{{ isset($item['open_in_new_tab']) && $item['open_in_new_tab'] ? '_blank' : '_self' }}"
-                                    class="flex items-center rounded-md bg-gray-100 p-3 hover:bg-gray-50"
-                                >
-                                    @if (isset($item['icon']) && $item['icon']?->raw())
-                                        <x-icon :name="'heroicon-' . $item['icon']->raw()" class="size-6 text-secondary-100" />
-                                    @endif
-                                    <span class="ml-3 text-base font-medium text-gray-900">
+                                @if (! empty($item['children']))
+                                    <div class="px-3 pt-3 text-sm font-semibold uppercase tracking-wide text-gray-400">
                                         {{ $item['title'] }}
-                                    </span>
-                                </a>
+                                    </div>
+                                    @foreach ($item['children'] as $child)
+                                        <a
+                                            href="{{ $child['url'] }}"
+                                            target="{{ isset($child['open_in_new_tab']) && $child['open_in_new_tab']?->value() ? '_blank' : '_self' }}"
+                                            class="flex items-center rounded-md bg-gray-100 p-3 hover:bg-gray-50"
+                                        >
+                                            @if (isset($child['icon']) && $child['icon']?->raw())
+                                                <x-icon :name="'heroicon-' . $child['icon']->raw()" class="size-6 text-secondary-100" />
+                                            @endif
+                                            <span class="ml-3 text-base font-medium text-gray-900">
+                                                {{ $child['title'] }}
+                                            </span>
+                                        </a>
+                                    @endforeach
+                                @else
+                                    <a
+                                        href="{{ $item['url'] }}"
+                                        target="{{ isset($item['open_in_new_tab']) && $item['open_in_new_tab']?->value() ? '_blank' : '_self' }}"
+                                        class="flex items-center rounded-md bg-gray-100 p-3 hover:bg-gray-50"
+                                    >
+                                        @if (isset($item['icon']) && $item['icon']?->raw())
+                                            <x-icon :name="'heroicon-' . $item['icon']->raw()" class="size-6 text-secondary-100" />
+                                        @endif
+                                        <span class="ml-3 text-base font-medium text-gray-900">
+                                            {{ $item['title'] }}
+                                        </span>
+                                    </a>
+                                @endif
                             @endforeach
                         </nav>
                         @if (($header->header_button_text ?? '') && ($header->header_button_link ?? ''))
                             <div class="mt-8 flex justify-center">
                                 <a
                                     href="{{ $header->header_button_link }}"
-                                    target="_blank"
+                                    target="{{ $header->header_button_open_in_new_tab ? '_blank' : '_self' }}"
                                     class="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-transparent bg-gradient-to-b from-primary-100 to-primary-200 px-6 py-3 text-base font-bold text-white opacity-100 transition duration-150 ease-in-out hover:opacity-70"
                                 >
                                     {{ $header->header_button_text }}

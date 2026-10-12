@@ -1,0 +1,53 @@
+title: 'Before / after'
+fields:
+  -
+    import: component_settings
+  -
+    handle: title_heading
+    field: title.title
+    config:
+      display: Title
+      width: 100
+  -
+    handle: text
+    field: text.text
+  -
+    handle: before_label
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Before - Label'
+      instructions: 'e.g. Magento layout XML'
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: after_label
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'After - Label'
+      instructions: 'e.g. Rapidez Blade'
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: before_image
+    field: image.image
+    config:
+      display: 'Before - Image'
+      width: 50
+  -
+    handle: after_image
+    field: image.image
+    config:
+      display: 'After - Image'
+      width: 50

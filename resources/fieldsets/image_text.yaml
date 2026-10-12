@@ -51,6 +51,18 @@ fields:
       display: Media
       width: 66
   -
+    handle: contain_media
+    field:
+      default: false
+      type: toggle
+      display: 'Show full media'
+      instructions: "Keep the media inside its column instead of running off the edge of the screen. Use this for images that shouldn't be cropped, like code screenshots."
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
     handle: content
     field:
       collapse: true

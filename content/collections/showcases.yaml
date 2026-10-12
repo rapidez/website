@@ -1,8 +1,9 @@
 title: Showcases
-template: default
+template: showcase
 layout: layout
 revisions: false
 sort_dir: asc
+route: 'showcases/{slug}'
 date_behavior:
   past: public
   future: private

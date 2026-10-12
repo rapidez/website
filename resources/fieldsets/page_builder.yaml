@@ -90,3 +90,23 @@ fields:
               fields:
                 -
                   import: versions_table
+            stats:
+              display: Stats
+              fields:
+                -
+                  import: stats
+            comparison_table:
+              display: 'Comparison table'
+              fields:
+                -
+                  import: comparison_table
+            showcase_slider:
+              display: 'Showcase slider'
+              fields:
+                -
+                  import: showcase_slider
+            before_after:
+              display: 'Before / after'
+              fields:
+                -
+                  import: before_after

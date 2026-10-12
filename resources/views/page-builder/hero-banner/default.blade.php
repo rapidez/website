@@ -14,12 +14,12 @@
                     @endif
                 </h1>
                 @if ($text)
-                    <div class="text-lg text-white lg:mt-4">
+                    <div class="max-w-2xl text-lg text-white lg:mt-4">
                         {!! $text !!}
                     </div>
                 @endif
                 <div class="mt-8 flex gap-6 text-white flex-col">
-                    <div class="flex gap-4">
+                    <div class="flex flex-wrap gap-4">
                         @if ($buttons && $buttons?->value())
                             @foreach($buttons ?? [] as $button)
                                 <div class="inline-flex rounded-full">
@@ -91,9 +91,13 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen
                         ></iframe>
-                    @endif
+                    </div>
                 </div>
-            </div>
+            @elseif ((string) $image)
+                <div class="pt-10 lg:w-[540px] lg:shrink-0 lg:self-center lg:pl-12 lg:pt-0">
+                    @responsive($image, ['class' => 'h-auto w-full'])
+                </div>
+            @endif
         </div>
     </div>
     <div class="relative -mb-px mt-auto block w-full">

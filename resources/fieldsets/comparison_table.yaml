@@ -1,0 +1,117 @@
+title: 'Comparison table'
+fields:
+  -
+    import: component_settings
+  -
+    handle: title_heading
+    field: title.title
+    config:
+      display: Title
+      width: 100
+  -
+    handle: text
+    field: text.text
+  -
+    handle: column_a_label
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Column A label'
+      instructions: 'e.g. Rapidez'
+      default: Rapidez
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: column_b_label
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Column B label'
+      instructions: 'e.g. Magento (Luma / Hyvä)'
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: rows
+    field:
+      collapse: true
+      previews: true
+      fullscreen: true
+      sets:
+        extra_row:
+          display: 'Extra row'
+          instructions: null
+          icon: null
+          sets:
+            row:
+              display: Row
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: feature
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Feature
+                    instructions: 'e.g. Hosting cost'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: value_a
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: 'Column A value'
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: value_b
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: 'Column B value'
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: highlight_a
+                  field:
+                    default: true
+                    type: toggle
+                    display: 'Highlight column A'
+                    instructions: 'Visually emphasize the column A value for this row'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+      type: replicator
+      display: Rows
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

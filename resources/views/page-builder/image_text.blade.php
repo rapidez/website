@@ -1,3 +1,8 @@
+@php
+    // "Show full media" keeps the media inside its column, uncropped, instead of running off the screen edge.
+    $containMedia = filter_var((string) ($contain_media ?? ''), FILTER_VALIDATE_BOOLEAN);
+    $containedClasses = 'h-auto w-full rounded-2xl';
+@endphp
 <div id="{{ $component_id }}" class="component mx-auto flex max-w-7xl flex-col gap-20 px-6 md:gap-28">
     @if (($variant->value()->value() ?? '') === 'text_left')
         <div class="grid items-center gap-x-60 gap-y-6 md:grid-cols-2">
@@ -8,7 +13,7 @@
                     @endforeach
                 </div>
             @endif
-            <div class="relative mr-[calc(50%-50vw)] max-md:ml-20">
+            <div @class(['relative', 'mr-[calc(50%-50vw)] max-md:ml-20' => ! $containMedia])>
                 @if ($background_icon?->value()?->value() ?? '')
                     @if (($background_icon?->value()?->value() ?? '') === 'angry-face')
                         <x-icon-angry class="absolute left-0 top-1/2 aspect-square h-52 -translate-y-1/2 translate-x-[-145px] text-gray-100 md:h-72 md:translate-x-[-275px]" />
@@ -18,9 +23,9 @@
                 @endif
                 <div class="flex flex-col rounded-2xl drop-shadow-toolbar">
                     @if ($media?->value()?->isImage() || $media?->value()?->isSvg())
-                        @responsive($media->value(), ['class' => 'relative mr-auto h-[360px] w-full rounded-bl-2xl object-cover object-left-top md:h-[720px] md:rounded-b-2xl'])
+                        @responsive($media->value(), ['class' => $containMedia ? $containedClasses : 'relative mr-auto h-[360px] w-full rounded-bl-2xl object-cover object-left-top md:h-[720px] md:rounded-b-2xl'])
                     @elseif($media?->value()?->isVideo() && $media?->value()?->url())
-                        <video src="{{ $media->value()->url() }}" loop autoplay muted class="relative mr-auto h-[360px] w-full rounded-bl-2xl object-cover object-left-top md:h-[720px] md:rounded-b-2xl" />
+                        <video src="{{ $media->value()->url() }}" loop autoplay muted class="{{ $containMedia ? $containedClasses : 'relative mr-auto h-[360px] w-full rounded-bl-2xl object-cover object-left-top md:h-[720px] md:rounded-b-2xl' }}" />
                     @endif
                 </div>
             </div>
@@ -34,7 +39,7 @@
                     @endforeach
                 </div>
             @endif
-            <div class="relative max-md:ml-20 max-md:mr-[calc(50%-50vw)] md:ml-[calc(50%-50vw)]">
+            <div @class(['relative', 'max-md:ml-20 max-md:mr-[calc(50%-50vw)] md:ml-[calc(50%-50vw)]' => ! $containMedia])>
                 @if ($background_icon?->value()?->value() ?? '')
                     @if (($background_icon?->value()?->value() ?? '') === 'angry-face')
                         <x-icon-angry class="absolute left-0 top-1/2 aspect-square h-52 -translate-y-1/2 translate-x-[-145px] text-gray-100 md:h-72 md:translate-x-[-175px]" />
@@ -44,9 +49,9 @@
                 @endif
                 <div class="flex flex-col rounded-2xl drop-shadow-toolbar">
                     @if ($media?->value()?->isImage() || $media?->value()?->isSvg())
-                        @responsive($media->value(), ['class' => 'max-md::mr-auto relative h-[360px] rounded-bl-2xl object-cover object-left-top md:ml-auto md:h-[720px] md:rounded-b-2xl md:object-right-top'])
+                        @responsive($media->value(), ['class' => $containMedia ? $containedClasses : 'max-md::mr-auto relative h-[360px] rounded-bl-2xl object-cover object-left-top md:ml-auto md:h-[720px] md:rounded-b-2xl md:object-right-top'])
                     @elseif($media?->value()?->isVideo() && $media?->value()?->url())
-                        <video src="{{ $media->value()->url() }}" loop autoplay muted class="max-md::mr-auto relative h-[360px] rounded-bl-2xl object-cover object-left-top md:ml-auto md:h-[720px] md:rounded-b-2xl md:object-right-top" />
+                        <video src="{{ $media->value()->url() }}" loop autoplay muted class="{{ $containMedia ? $containedClasses : 'max-md::mr-auto relative h-[360px] rounded-bl-2xl object-cover object-left-top md:ml-auto md:h-[720px] md:rounded-b-2xl md:object-right-top' }}" />
                     @endif
                 </div>
             </div>

@@ -53,3 +53,11 @@ fields:
       display: 'Youtube embed URL'
       if:
         variant: 'equals default'
+  -
+    handle: image
+    field: image.image
+    config:
+      display: Image
+      instructions: 'Shown on the right when there is no YouTube video'
+      if:
+        variant: 'equals default'
