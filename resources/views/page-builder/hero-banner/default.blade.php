@@ -78,9 +78,9 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-1 pt-12 lg:flex lg:items-start lg:justify-start">
-                <div class="relative w-full lg:w-[500px]">
-                    @if ($youtube_embed_url)
+            @if ((string) $youtube_embed_url)
+                <div class="mt-1 pt-12 lg:flex lg:items-start lg:justify-start">
+                    <div class="relative w-full lg:w-[500px]">
                         <iframe
                             class="aspect-video h-full w-full rounded-2xl shadow-md"
                             width="560"
