@@ -23,6 +23,8 @@ Route::statamic('cloud', 'cloud');
 
 Route::redirect('slack', 'https://join.slack.com/t/rapidez/shared_invite/zt-35gbinhoi-1KcVac_1mYRprZlQPbRJsg');
 
+Route::redirect('install', 'https://raw.githubusercontent.com/rapidez/core/master/install.sh');
+
 /*
 
 After 4 years we're getting a `invite_limit_reached`, after reauthenticating the app
