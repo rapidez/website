@@ -3,6 +3,7 @@ module.exports = {
     theme: {
         fontFamily: {
             body: ["Poppins"],
+            mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "monospace"],
         },
         extend: {
             colors: {
@@ -17,7 +18,24 @@ module.exports = {
                 },
                 heading: "#213F60",
                 inactive: "#577C87",
-                button: "#4285F4"
+                button: "#4285F4",
+                // Same palette as the terminal illustrations (rapidez-install-terminal.svg).
+                terminal: {
+                    DEFAULT: "#1c2333",
+                    chrome: "#151a28",
+                    text: "#c7cedd",
+                    muted: "#5c6577",
+                    green: "#9ece6a",
+                },
+            },
+            keyframes: {
+                blink: {
+                    "0%, 100%": { opacity: "1" },
+                    "50%": { opacity: "0" },
+                },
+            },
+            animation: {
+                blink: "blink 1s step-end infinite",
             },
         },
         dropShadow: {

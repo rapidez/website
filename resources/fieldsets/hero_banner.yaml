@@ -28,6 +28,24 @@ fields:
     handle: text
     field: text.text
   -
+    handle: install_command
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Install command'
+      instructions: 'Shown as a copyable command, e.g. curl -fsSL https://rapidez.io/install | bash'
+      if:
+        variant: 'equals default'
+  -
+    handle: install_command_text
+    field: text.text
+    config:
+      display: 'Install command text'
+      instructions: 'Small text below the install command, e.g. with a link to the /try page'
+      if:
+        variant: 'equals default'
+  -
     handle: buttons
     field:
       max_sets: 2

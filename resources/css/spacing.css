@@ -10,3 +10,7 @@
 .seperator.component + .seperator.component {
     @apply mt-0;
 }
+
+.component.hero + .install-command.component {
+    @apply pt-8 md:pt-12;
+}

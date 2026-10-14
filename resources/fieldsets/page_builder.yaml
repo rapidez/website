@@ -110,3 +110,9 @@ fields:
               fields:
                 -
                   import: before_after
+            install_command:
+              display: 'Install command'
+              icon: programming-script-code
+              fields:
+                -
+                  import: install_command

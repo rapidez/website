@@ -18,6 +18,16 @@
                         {!! $text !!}
                     </div>
                 @endif
+                @if ((string) ($install_command ?? ''))
+                    <div class="mt-8 max-w-xl">
+                        <x-install-command :command="(string) $install_command" class="bg-secondary-900/70 shadow-lg ring-1 ring-white/15 backdrop-blur" />
+                        @if ((string) ($install_command_text ?? ''))
+                            <div class="mt-3 text-sm text-white/70 [&_a]:font-semibold [&_a]:text-white [&_a]:underline [&_a]:decoration-white/40 [&_a]:underline-offset-4 hover:[&_a]:decoration-white">
+                                {!! $install_command_text !!}
+                            </div>
+                        @endif
+                    </div>
+                @endif
                 <div class="mt-8 flex gap-6 text-white flex-col">
                     <div class="flex flex-wrap gap-4">
                         @if ($buttons && $buttons?->value())

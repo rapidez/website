@@ -1,0 +1,32 @@
+title: 'Install command'
+fields:
+  -
+    import: component_settings
+  -
+    handle: title_subheading
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Subheading
+      instructions: 'Small text above the title, e.g. Try it locally'
+      listable: hidden
+  -
+    handle: title_heading
+    field: title.title
+    config:
+      display: Title
+      width: 100
+  -
+    handle: text
+    field: text.text
+  -
+    handle: command
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Command
+      instructions: 'The steps and terminal output are in resources/views/page-builder/install_command.blade.php and follow the install script'
+      default: 'curl -fsSL https://rapidez.io/install | bash'
+      listable: hidden
