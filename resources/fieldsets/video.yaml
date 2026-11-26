@@ -1,0 +1,10 @@
+title: Video
+fields:
+  -
+    handle: video
+    field:
+      type: video
+      display: Video
+      instructions: 'YouTube or Vimeo URL, for example https://youtu.be/...'
+      validate:
+        - required
