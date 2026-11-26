@@ -55,7 +55,24 @@ fields:
               display: Text
               fields:
                 -
-                  import: text
+                  handle: text
+                  field: text.text
+                  config:
+                    sets:
+                      media:
+                        display: Media
+                        sets:
+                          video:
+                            display: Video
+                            instructions: 'YouTube or Vimeo video inside the text'
+                            fields:
+                              -
+                                import: video
+            video:
+              display: Video
+              fields:
+                -
+                  import: video
             blog_overview:
               display: 'Blog overview'
               fields: {  }
